@@ -6,6 +6,8 @@ $foodid = get("foodid");
 
 $result = execute_query("SELECT * FROM `Food` WHERE `FoodId` =$foodid");
 
+$result1 = execute_query("SELECT * FROM TypeFood");
+
 if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
 }
@@ -25,10 +27,18 @@ if (mysqli_num_rows($result) > 0) {
         </tr>
 
         <tr>
-            <th>Type Id</th>
-            <td><input type="text" name="typeid" id="typeid"
-                       value="<?php echo $row["TypeId"] ?>" /></td>
-        </tr>
+            <th>Type Food</th>
+            <td>
+                <select name="typeid">
+                    <?php while (($row = mysqli_fetch_assoc($result1))) {
+                    ?>                    
+                    <option value="<?php echo $row["TypeId"] ?>"><?php echo $row["TypeName"] ?></option>
+                    <?php
+                    }
+                    ?>
+                </select>
+            </td>
+        </tr>	
 
 
         <tr>

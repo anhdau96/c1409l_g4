@@ -10,7 +10,7 @@ $rs_count = execute_query("SELECT COUNT(*) as cnt FROM Food");
 $count_row = mysqli_fetch_assoc($rs_count);
 $total = $count_row["cnt"];
 
-$rs = execute_query("SELECT TypeName,FoodName,FoodDescription,FoodImage,FoodPrice FROM Food F JOIN TypeFood TF ON F.TypeId=TF.TypeId ORDER BY TypeName " . createLimitForPaging($n));
+$rs = execute_query("SELECT * FROM Food F JOIN TypeFood TF ON F.TypeId=TF.TypeId ORDER BY TypeName " . createLimitForPaging($n));
 $total_page = ceil($total / PAGE_ROW);
 ?>
 

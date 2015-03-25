@@ -3260,7 +3260,7 @@ address {
 	.footer p {
 		font-size: 14px;
 	}
-	..footer {
+	.footer {
 		padding: 1.5em 0;
 	}
 	.contact-section-grid {

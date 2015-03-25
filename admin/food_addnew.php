@@ -19,10 +19,10 @@ $result = execute_query("SELECT * FROM TypeFood");
         <tr>
             <th>Type Food</th>
             <td>
-                <select>
+                <select name="typeid">
                     <?php while (($row = mysqli_fetch_assoc($result))) {
                     ?>                    
-                    <option name="typeid" value="<?php echo $row["TypeId"] ?>"><?php echo $row["TypeName"] ?></option>
+                    <option value="<?php echo $row["TypeId"] ?>"><?php echo $row["TypeName"] ?></option>
                     <?php
                     }
                     ?>
@@ -43,7 +43,7 @@ $result = execute_query("SELECT * FROM TypeFood");
         
         <tr>
             <th>Food Price</th>
-            <td><input type="text" name="foodprice" id="foodprice" /></td>
+            <td><input type="number" name="foodprice" id="foodprice" /></td>
         </tr>
 
         <tr>

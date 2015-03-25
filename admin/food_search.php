@@ -43,9 +43,9 @@ if ($name != "") {
         $total = $count_row["cnt"];
 
         if ($choice == "FoodName" || $choice == "TypeName") {
-            $result1 = execute_query("SELECT TypeName,FoodName,FoodDescription,FoodImage,FoodPrice FROM Food F JOIN TypeFood TF ON F.TypeId=TF.TypeId WHERE $choice  LIKE '%$name%' ORDER BY TypeName" . createLimitForPaging($n));
+            $result1 = execute_query("SELECT * FROM Food F JOIN TypeFood TF ON F.TypeId=TF.TypeId WHERE $choice  LIKE '%$name%' ORDER BY TypeName" . createLimitForPaging($n));
         } else {
-            $result1 = execute_query("SELECT TypeName,FoodName,FoodDescription,FoodImage,FoodPrice FROM Food F JOIN TypeFood TF ON F.TypeId=TF.TypeId WHERE $choice = $name ORDER BY TypeName " . createLimitForPaging($n));
+            $result1 = execute_query("SELECT * FROM Food F JOIN TypeFood TF ON F.TypeId=TF.TypeId WHERE $choice = $name ORDER BY TypeName " . createLimitForPaging($n));
         }
 
         $total_page = ceil($total / PAGE_ROW);
