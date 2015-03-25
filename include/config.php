@@ -1,7 +1,7 @@
 <?php
-define("DB_HOST","10.0.0.29");
-define("DB_USER","c1409l_g4");
-define("DB_PASS","12345678");
+define("DB_HOST","localhost");
+define("DB_USER","root");
+define("DB_PASS","");
 define("DB_NAME","c1409l_g4");
 define("PAGE_ROW", 10);
 define("BASE","c1409l_g4");
