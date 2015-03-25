@@ -11,7 +11,7 @@
         <div id="wrapper">
             <div id="header">
                 <h1>Xin chào, <?php echo ($_SESSION["username"]) ?></h1>
-                <a href="process/admin.php?do=logout">Đăng xuất</a>
+                <a href="process/admin?do=logout">Đăng xuất</a>
             </div>
 
             <div id="body">
