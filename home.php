@@ -71,7 +71,7 @@
 	<!-- footer-section-starts -->
 	<div class="footer">
 		<div class="container">
-			<p class="wow fadeInLeft" data-wow-delay="0.4s">&copy; 2014  All rights  Reserved | Designed by &nbsp;<a href="http://C1409L-G4.com" target="target_blank">C1409L-G4</a></p>
+			<p class="wow fadeInLeft" data-wow-delay="0.4s">&copy; 2015  All rights  Reserved | Designed by &nbsp;<a href="http://C1409L-G4.com" target="target_blank">C1409L-G4</a></p>
 		</div>
 	</div>
 	<!-- footer-section-ends -->
