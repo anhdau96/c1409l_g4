@@ -1,0 +1,9 @@
+@charset "utf-8";
+body {
+	background:url(../images/adminlogin.jpg) no-repeat;
+        margin: 120px 0 100px 0 ;
+}
+body h3{
+    text-align: center;
+   
+}

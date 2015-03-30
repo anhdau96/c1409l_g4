@@ -1,16 +1,11 @@
-
-<?php
-
-//require_once 'include/function_common.php';
-?>
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="<?php base_url("admin/css/bootstrap.min.css") ?>" rel="stylesheet">
-<link href="<?php base_url("admin/css/admin.css") ?>">
+ <link href="<?php base_url("admin/css/admin_login.css") ?>" rel="stylesheet" type="text/css" media="all" />
 <title>Admin Login</title>
 </head>
 <body>
@@ -59,3 +54,5 @@
     <script src="../js/admin2.js"></script>
 </body>
 </html>
+
+

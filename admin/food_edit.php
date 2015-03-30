@@ -10,6 +10,7 @@ $result1 = execute_query("SELECT * FROM TypeFood");
 
 if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
+    $choice = $row["TypeId"];
 }
 ?>
 <form action="process/food?do=update" method="post">
@@ -30,9 +31,9 @@ if (mysqli_num_rows($result) > 0) {
             <th>Type Food</th>
             <td>
                 <select name="typeid">
-                    <?php while (($row = mysqli_fetch_assoc($result1))) {
+                    <?php while (($row1 = mysqli_fetch_assoc($result1))) {
                     ?>                    
-                    <option value="<?php echo $row["TypeId"] ?>"><?php echo $row["TypeName"] ?></option>
+                    <option value="<?php echo $row1["TypeId"] ?>" <?php echo $choice == $row1["TypeId"] ? "selected" : "" ?>><?php echo $row1["TypeName"] ?></option>
                     <?php
                     }
                     ?>
