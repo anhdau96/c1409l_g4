@@ -1,4 +1,5 @@
 <?php
+require_once 'inc_all.php';
 require 'inc_checklogin.php';
 ?>
 <!DOCTYPE html>

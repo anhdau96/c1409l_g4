@@ -1,11 +1,14 @@
+<?php
+require_once '../inc_all.php';
+?>
 <!doctype html>
 <html>
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="<?php base_url("admin/css/bootstrap.min.css") ?>" rel="stylesheet">
- <link href="<?php base_url("admin/css/admin_login.css") ?>" rel="stylesheet" type="text/css" media="all" />
+<link href="css/bootstrap.min.css") rel="stylesheet">
+ <link href="css/admin_login.css") rel="stylesheet" type="text/css" media="all" />
 <title>Admin Login</title>
 </head>
 <body>
