@@ -20,7 +20,7 @@ require_once '../inc_all.php';
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
                     <div class="panel-body">
-	<form role="form" action="process/admin?do=do_login" method="post">
+	<form role="form" action="process/admin.php?do=do_login" method="post">
 		<fieldset>
                     <div class="form-group">
                         <input class="form-control" placeholder="Username" name="username" type="text" autofocus>

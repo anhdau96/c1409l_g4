@@ -1,5 +1,5 @@
 <?php
-
+require_once 'functions.php';
 
 $function_name = get("do");
 

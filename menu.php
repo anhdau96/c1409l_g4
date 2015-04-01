@@ -72,7 +72,7 @@ for ($i=1;$i<=$total_page; $i++) {
       <p><?php echo $row["FoodDescription"]?></p>
     </div>
     <div class="col-md-3"> 
-      <p><?php echo $row["FoodPrice"]?></p>
+      <p><?php echo $row["FoodPrice"]?> VNĐ</p>
     </div>
   </div>
   <hr />

@@ -6,7 +6,7 @@ require 'inc_checklogin.php';
     Thêm mới Admin
 </h1>
 <br />
-<form action="process/admin?do=add_new" method="post">
+<form action="process/admin.php?do=add_new" method="post">
     <table>
         <tr>
             <th>Username</th>
