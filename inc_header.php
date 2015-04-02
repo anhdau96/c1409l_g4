@@ -51,7 +51,7 @@ require_once 'inc_all.php';
 			<div class="container">
 				<div class="top-menu">
 					<ul>
-                                            <li class="active"><a href="index.php" class="scroll">Trang chủ</a></li>|
+                                            <li><a href="index.php">Trang chủ</a></li>|
 						<li><a href="menu.php">Thực Đơn</a></li>|
 						<li><a href="Order.php">Đặt hàng</a></li>|
 						<li><a href="contact.php">Liên Hệ</a></li>
@@ -62,7 +62,7 @@ require_once 'inc_all.php';
 					<ul>
 						<li><a href="login.php">Đăng nhập</a>  </li> |
 						<li><a href="register.php">Đăng kí</a> </li> |
-						<li><a href="#">Trợ giúp</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Giỏ Hàng</a></li>
 						<div class="clearfix"></div>
 					</ul>
 				</div>

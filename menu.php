@@ -30,8 +30,8 @@ $total_page = ceil($total / PAGE_ROW);
 	<!-- content-section-starts -->
         <div class="container">
             <div class="jumbotron">
-                <h1>Thực đơn của chúng tôi</h1>      
-                <p>Thực đơn có thể đc thay đổi mỗi ngày</p>
+                <h1 style="font-family: Monotype Corsiva">MENU</h1>      
+                <p>Thực đơn có thể được thay đổi mỗi ngày</p>
                 
     <ul class="nav nav-tabs">
     <li class="<?php if ($choose=='appetizer' || $choose == '') echo "active" ?>"><a href="menu.php?page=1&choose=appetizer">Khai vị</a></li>
@@ -44,17 +44,20 @@ for ($i=1;$i<=$total_page; $i++) {
 }
 ?>
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-2">
+      <p>Loại món ăn</p>
+    </div>
+    <div class="col-md-2"> 
       <p>Tên món ăn</p>
     </div>
-    <div class="col-md-3"> 
+    <div class="col-md-4"> 
       <p>Mô tả</p>
     </div>
-    <div class="col-md-3"> 
-      <p>Hình ảnh</p>
+    <div class="col-md-2"> 
+        <p>Giá bán</p>
     </div>
-    <div class="col-md-3"> 
-      <p>Giá bán</p>
+     <div class="col-md-2"> 
+      <p>Giỏ hàng</p>
     </div>
   </div>
   <hr />
@@ -62,17 +65,22 @@ for ($i=1;$i<=$total_page; $i++) {
     while ($row = mysqli_fetch_assoc($result)){
 ?>
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-2">
       <p><?php echo $row["TypeName"]?></p>
     </div>
-    <div class="col-md-3"> 
+    <div class="col-md-2"> 
       <p><?php echo $row["FoodName"]?></p>
     </div>
     <div class="col-md-3"> 
       <p><?php echo $row["FoodDescription"]?></p>
     </div>
-    <div class="col-md-3"> 
+    <div class="col-md-2"> 
       <p><?php echo $row["FoodPrice"]?> VNĐ</p>
+    </div>
+    <div class="col-md-3"> 
+      <p><a href="#" class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-shopping-cart"></span>Cho vào giỏ hàng
+        </a></p>
     </div>
   </div>
   <hr />

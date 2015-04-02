@@ -17,8 +17,8 @@ require_once 'inc_header.php';
 								 <div class="form_details">
 					                 <input type="text" class="text" value="Tên" onfocus="this.value = '';" onblur="if (this.value === '') {this.value = 'Name';}">
 									 <input type="text" class="text" value="Địa chỉ email" onfocus="this.value = '';" onblur="if (this.value === '') {this.value = 'Email Address';}">
-									 <input type="text" class="text" value="Chủ đề" onfocus="this.value = '';" onblur="if (this.value === '') {this.value = 'Subject';}">
-									 <textarea value="Nội dung" onfocus="this.value = '';" onblur="if (this.value === '') {this.value = 'Message';}">Message</textarea>
+									 <input type="text" class="text" value="Chủ đề" onfocus="this.value = '';" onblur="if (this.value === '') {this.value = 'Chủ Đề';}">
+									 <textarea value="Nội dung" onfocus="this.value = '';" onblur="if (this.value === '') {this.value = 'Nội dung';}">Nội dung</textarea>
 									 <div class="clearfix"> </div>
 									 <div class="sub-button wow swing animated" data-wow-delay= "0.4s">
 									 	<input name="submit" type="submit" value="Gửi Tin nhắn">
