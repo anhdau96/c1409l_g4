@@ -1,6 +1,5 @@
 <?php
 require 'inc_header.php';
-require 'inc_checklogin.php';
 
 $result = execute_query("SELECT * FROM TypeFood");
 

@@ -1,7 +1,5 @@
 <?php
-require 'inc_header.php';
-require 'inc_checklogin.php';
-
+require_once 'inc_header.php';
 // tao ra query, phai chay trong navicat truoc
 $query1 = "SELECT * FROM `Admin`";
 

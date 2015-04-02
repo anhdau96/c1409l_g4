@@ -1,5 +1,5 @@
 <?php
-require 'inc_checklogin.php';
+require 'inc_header.php';
 ?>
 <!DOCTYPE html>
 <html>

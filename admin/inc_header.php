@@ -6,7 +6,7 @@ require_once '../inc_all.php';
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Admin Home</title>
+<title><?php echo $title_map[$path] ?></title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href=" css/admin.css"rel="stylesheet">
 <link rel="stylesheet" href="fonts/font-awesome.min.css">
@@ -30,108 +30,90 @@ require_once '../inc_all.php';
             <div class="wrapper">           
                 <a class="navbar-brand">ATDragons Admin</a>
                 <div id="head">
-                <h2 style="color: #686868">Xin chÃ o, <?php echo ($_SESSION["username"]) ?></h2>
-            <a href="process/admin.php?do=logout" style="color: blue">ÄÄƒng xuáº¥t</a>
+                <h2 style="color: #686868">Xin chào, <?php echo ($_SESSION["username"]) ?></h2>
+            <a href="process/admin.php?do=logout" style="color: blue">Đăng xuất</a>
                 </div>
             </div>                           
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">                     
                         <li>
-                            <a href="#"><i class="fa fa-user fa-fw"></i> Quáº£n LÃ½ Admin <span class="fa arrow"></span></a> 
+                            <a href="#"><i class="fa fa-user fa-fw"></i> Quản lý Admin <span class="fa arrow"></span></a> 
         
                             <ul class="nav nav-third-level">
                                 <li>
-                                    <a href="admin_list"> Danh sách Admin</a>
+                                    <a href="admin_list.php"> Danh Sách Admin</a>
                                 </li>
                                 <li>
-                                    <a href="admin_addnew">Thêm mới Admin</a>
-                                </li>
-                                <li>
-                                    <a href="admin_edit"> Cập nhật Admin</a>
-                                </li>                               
+                                    <a href="admin_addnew.php">Thêm Mới Admin</a>
+                                </li>                            
                             </ul>
                         </li>
                         
                         <li>
-                            <a href="#"><i class="fa fa-phone fa-fw"></i> LiÃªn<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-phone fa-fw"></i> Liên Hệ<span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
                                 <li>
-                                    <a href="contact_list">Danh SÃ¡ch LiÃªn Há»‡</a>
+                                    <a href="contact_list.php">Danh Sách Liên Hệ</a>
                                 </li>
                                 <li>
-                                    <a href="contact_addnew">ThÃªm Má»›i LiÃªn Há»‡</a>
-                                </li>
-                                <li>
-                                    <a href="contact_edit.php">Cáº­p Nháº­p LiÃªn Há»‡</a>
+                                    <a href="contact_addnew.php">Thêm Mới Liên Hệ</a>
                                 </li>
                             </ul>                        
                         </li> 
                         
                         <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Thá»±c ÄÆ¡n<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i>Thực Đơn<span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
                                 <li>
-                                    <a href="food_list">Danh SÃ¡ch MÃ³n Ä‚n</a>
+                                    <a href="food_list.php">Danh Sách Món Ăn</a>
                                 </li>
                                 <li>
-                                    <a href="food_addnew">ThÃªm Má»›i MÃ³n Ä‚n</a>
-                                </li>
-                                 <li>
-                                     <a href="food_edit">Chá»‰nh Sá»­a MÃ³n Ä‚n</a>
+                                    <a href="food_addnew.php">Thêm Mới Món Ăn</a>
                                 </li>
                                 <li>
-                                    <a href="food_search">TÃ¬m MÃ³n Ä‚n</a>
+                                    <a href="food_search.php">Tìm Kiếm Món Ăn</a>
                                 </li>                             
                             </ul>
                         </li>
   
                          <li>
-                            <a href="#"><i class="fa fa-home fa-fw"></i> ThÃ´ng Tin NhÃ  HÃ ng<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-home fa-fw"></i>Thông Tin Nhà Hàng<span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
                                 <li>
-                                    <a href="restaurant_list">Danh SÃ¡ch NhÃ  HÃ ng</a>
+                                    <a href="restaurant_list.php">Danh Sách Nhà Hàng</a>
                                 </li>
                                 <li>
-                                    <a href="restaurant_addnew">ThÃªm Má»›i NhÃ  HÃ ng</a>
-                                </li>
-                                 <li>
-                                     <a href="restaurant_edit">Cáº­p Nháº­p NhÃ  HÃ ng</a>
-                                </li>                                                           
+                                    <a href="restaurant_addnew.php">Thêm Mới Nhà Hàng</a>
+                                </li>                                                     
                             </ul>
                         </li>
  
                          <li>
-                            <a href="#"><i class="fa fa-list fa-fw"></i> Loáº¡i Thá»©c Ä‚n<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-list fa-fw"></i>Loại đồ ăn<span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
                                 <li>
-                                    <a href="typefood_list">Danh SÃ¡ch CÃ¡c Loáº¡i Thá»©c Ä‚n</a>
+                                    <a href="typefood_list.php">Danh sách loại đồ ăn</a>
                                 </li>
                                 <li>
-                                    <a href="typefood_addnew">ThÃªm Má»›i Loáº¡i Thá»©c Ä‚n</a>
-                                </li>
-                                 <li>
-                                     <a href="typefood_edit">Cáº­p Nháº­p Loáº¡i Thá»©c Ä‚n</a>
-                                </li>                                                           
+                                    <a href="typefood_addnew.php">Thêm mới loại đồ ăn</a>
+                                </li>                                                         
                             </ul>
                         </li>
                       
                          <li>
-                            <a href="#"><i class="fa fa-money fa-fw"></i> Thanh ToÃ¡n<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-money fa-fw"></i>Kiểu Thanh Toán<span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
                                 <li>
-                                    <a href="typepay_list">CÃ¡c Kiá»ƒu Thanh ToÃ¡n</a>
+                                    <a href="typepay_list.php">Danh Sách Kiểu Thanh Toán</a>
                                 </li>
                                 <li>
-                                    <a href="typepay_addnew">ThÃªm Má»›i Kiá»ƒu Thanh ToÃ¡n</a>
-                                </li>
-                                 <li>
-                                     <a href="typepay_edit">Chá»‰nh Sá»­a CÃ¡c Kiá»ƒu Thanh ToÃ¡n</a>
+                                    <a href="typepay_addnew.php">Thêm Mới Kiểu Thanh Toán</a>
                                 </li>                                                           
                             </ul>
                         </li>
                           <li>
-                            <a href="#"><i class="fa fa-users fa-fw"></i> Pháº£n Há»“i KhÃ¡ch HÃ ng </a>
+                              <a href="feedback_list.php"><i class="fa fa-users fa-fw"></i>Phản Hồi Khách Hàng</a>
                           </li>
                         
                     </ul>

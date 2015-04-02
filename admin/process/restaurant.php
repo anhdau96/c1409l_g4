@@ -9,7 +9,7 @@ function add_new() {
     $resphone = post("resphone");
     $resmanager = post("resmanager");
     execute_query("INSERT INTO `Restaurant` VALUES (NULL, '$resname','$resaddress','$resphone','$resmanager')");
-    redirect("../restaurant_list");
+    redirect("../restaurant_list.php");
 }
 
 function update() {
@@ -18,6 +18,12 @@ function update() {
     $resaddress = post("resaddress");
     $resphone = post("resphone");
     $resmanager = post("resmanager");
-    execute_query("UPDATE `Admin` SET ResName = '$resname',ResAddress='$resaddress' , ResPhone='$resphone', ResManager='$resmanager' WHERE ResId=$resid");
-    redirect("../restaurant_list");
+    execute_query("UPDATE `Restaurant` SET ResName = '$resname',ResAddress='$resaddress' , ResPhone='$resphone', ResManager='$resmanager' WHERE ResId=$resid");
+    redirect("../restaurant_list.php");
+}
+
+function delete() {
+    $foodid= get("resid");
+    execute_query("DELETE FROM `Restaurant` WHERE ResId='$resid'");
+    redirect("../restaurant_list.php");
 }

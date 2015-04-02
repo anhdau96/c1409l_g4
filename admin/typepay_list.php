@@ -1,6 +1,5 @@
 <?php
 require 'inc_header.php';
-require 'inc_checklogin.php';
 
 // tao ra query, phai chay trong navicat truoc
 $query1 = "SELECT * FROM `Typepay`";

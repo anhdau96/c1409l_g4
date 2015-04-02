@@ -1,6 +1,5 @@
 <?php
 require 'inc_header.php';
-require 'inc_checklogin.php';
 
 $name = get("search_food");
 $choice = get("choice");

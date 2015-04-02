@@ -1,6 +1,5 @@
 <?php
 require 'inc_header.php';
-require 'inc_checklogin.php';
 ?>
 <h1>
     Thêm mới Admin
