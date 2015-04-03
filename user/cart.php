@@ -34,7 +34,7 @@ function delete() {
     $cart = $_SESSION["cart"];
     ///
 
-    $productid = get("foodid");
+    $foodid = get("foodid");
     unset($cart[$foodid]);
 
     $_SESSION["cart"] = $cart;

@@ -55,28 +55,17 @@ require_once 'include/process.php';
 					<ul>
                                             <li><a href="index.php">Trang chủ</a></li>|
 						<li><a href="menu.php">Thực Đơn</a></li>|
-						<li><a href="Order.php">Đặt Bàn</a></li>|
+                                                <li><a href="about.php">Giới thiệu</a></li>|
 						<li><a href="contact.php">Liên Hệ</a></li>
 						<div class="clearfix"></div>
 					</ul>
 				</div>
-                            <div class="login-section">
-					<ul>    
-                                                <?php if (isset($_SESSION["fullname"])){
-                                                     echo ("<li><a>Xin chào, " . ($_SESSION["fullname"]) . "</a></li> |");
-                                                ?>
-                                                     <li><a href="user/user.php?do=logout">Đăng xuất</a></li> |
-                                                <?php
-                                                }
-                                                else {
-                                                ?>   
-                                                    <li><a href="login.php">Đăng nhập</a></li> |
-                                                    <li><a href="register.php">Đăng kí</a> </li> |     
-                                                <?php
-                                                }
-                                                ?>                                                   
-                                                <li><a href="cart_view.php"><span class="glyphicon glyphicon-shopping-cart"></span>Giỏ Hàng</a></li>
-                                                <div class="clearfix"></div>
+				<div class="login-section">
+					<ul>
+						<li><a href="login.php">Đăng nhập</a>  </li> |
+						<li><a href="register.php">Đăng kí</a> </li> |
+						<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Giỏ Hàng</a></li>
+						<div class="clearfix"></div>
 					</ul>
 				</div>
 				<div class="clearfix"></div>

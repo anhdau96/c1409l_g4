@@ -66,16 +66,16 @@ for ($i=1;$i<=$total_page; $i++) {
 ?>
   <div class="row" style="color: palevioletred">
     <div class="col-md-2">
-      <p style="font-family: Monotype Corsiva"><?php echo $row["TypeName"]?></p>
+      <p style="font-family: Tahoma"><?php echo $row["TypeName"]?></p>
     </div>
     <div class="col-md-2"> 
-      <p style="font-family: Monotype Corsiva"><?php echo $row["FoodName"]?></p>
+      <p style="font-family: Tahoma"><?php echo $row["FoodName"]?></p>
     </div>
     <div class="col-md-3"> 
-      <p style="font-family: Monotype Corsiva"><?php echo $row["FoodDescription"]?></p>
+      <p style="font-family: Tahoma"><?php echo $row["FoodDescription"]?></p>
     </div>
     <div class="col-md-2"> 
-      <p style="font-family: Monotype Corsiva"><?php echo $row["FoodPrice"]?> VNĐ</p>
+      <p style="font-family: Tahoma"><?php echo $row["FoodPrice"]?> VNĐ</p>
     </div>
     <div class="col-md-3"> 
       <p><a href="user/cart.php?do=add&choose=<?php echo $choose?>&page=<?php echo $n?>&foodid=<?php echo $row["FoodId"]?>" class="btn btn-info btn-lg">

@@ -6,7 +6,7 @@ require_once 'inc_header.php';
 if (isset($_SESSION["cart"])) {
     $cart = $_SESSION["cart"];
     $i = count($_SESSION["cart"]);
-    $query = "SELECT * FROM product WHERE foodid IN (";
+    $query = "SELECT * FROM Food WHERE FoodId IN (";
     $comma = "";
 
 
@@ -18,51 +18,97 @@ if (isset($_SESSION["cart"])) {
     $rs = execute_query($query);
 }
 
-if (!(isset($_SESSION["fullname"]))) redirect ("login.php");
-else
-    {
+?>
+
+    <?php
     if (isset($_SESSION["cart"])) {
         ?>
-        <h1>Food in your card: 
+    <div class="container">
+            <div class="jumbotron">
+        <h1>Số lương món ăn trong giỏ hàng: 
             <?php
             echo $i;
-        }
         ?>
     </h1>
     <form action="#" method="post">
-        <table>
-            <tr>
-                <td>Product ID</td>
-                <td>Product Name</td>
-                <td>Price</td>        
-                <td>Quantity</td>
-                <td>Total</td>
-            </tr>
+        <div class="row" style="color: blueviolet">
+            <div class="col-md-2">
+                <p>Tên món ăn</p>
+            </div>
+            <div class="col-md-2"> 
+                <p>Giá bán</p>
+            </div>
+            <div class="col-md-4"> 
+                <p>Số lượng</p>
+            </div>
+            <div class="col-md-2"> 
+                <p>Số Tiền</p>
+            </div>
+            <div class="col-md-2"> 
+                <p>Bỏ món ăn</p>
+            </div>
+        </div>
+        <hr />
 
             <?php
             $totalprice = 0;
             if (isset($_SESSION["cart"])) {
                 while ($row = mysqli_fetch_assoc($rs)) {
                     ?>
-                    <tr>
-                        <td><?php echo $row["FoodId"] ?></td>
-                        <td><?php echo $row["FoodName"] ?></td>
-                        <td><?php echo $row["FoodPrice"] ?></td>        
-                        <td><?php echo $_SESSION["cart"][$row["foodid"]] ?></td>
-                        <td><?php echo $_SESSION["cart"][$row["foodid"]] * $row["FoodPrice"] ?></td>
-                        <td><a href="process/cart.php?do=delete&foodid=<?php echo $row["foodid"] ?>">X</a></td>
-                    </tr>
+                    <div class="row" style="color: palevioletred">
+                        <div class="col-md-2">
+                            <p><?php echo $row["FoodName"] ?></p>
+                        </div>
+                        <div class="col-md-2"> 
+                            <p><?php echo $row["FoodPrice"]?> VNĐ</p>
+                        </div>
+                        <div class="col-md-3"> 
+                            <p><?php echo $_SESSION["cart"][$row["FoodId"]] ?></p>
+                        </div>
+                        <div class="col-md-2"> 
+                            <p><?php echo $_SESSION["cart"][$row["FoodId"]] * $row["FoodPrice"] ?></p>
+                        </div>   
+                        <div class="col-md-2"> 
+                            <p><a href="user/cart.php?do=delete&foodid=<?php echo $row["FoodId"] ?>">X</a></p>
+                        </div>
+                    </div>
+                    <hr />
                     <?php
-                    $totalprice += ($_SESSION["cart"][$row["productid"]] * $row["price"]);
+                    $totalprice += ($_SESSION["cart"][$row["FoodId"]] * $row["FoodPrice"]);
                 }
             }
             ?>
-            <tr>
-                <th colspan="4" style="text-align: right">Total Price: </th><td><?php echo $totalprice ?></td>
-            </tr>
-        </table>
+                <div class="row" style="color: palevioletred">
+                        <div class="col-md-2">
+                        </div>
+                        <div class="col-md-2"> 
+
+                        </div>
+                        <div class="col-md-3"> 
+                        </div>
+                        <div class="col-md-2">
+                            <p>Thành tiền</p>
+                        </div>   
+                        <div class="col-md-2"> 
+                            <p><?php echo $totalprice ?></p>
+                        </div>
+                </div>
+                <hr />
+
     </form>
-?>  
+    </div>
+    </div>
+    <?php
+    }
+    else {
+    ?>
+        <div class="container">
+            <div class="jumbotron">
+                <h2>Không có món ăn nào trong giỏ hàng.... <a href="menu.php">CHỌN MÓN NGAY NÀO !</a></h2>
+            </div>
+        </div>
+
 <?php
+    }
 require_once 'inc_footer.php';
 ?>
