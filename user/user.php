@@ -29,11 +29,7 @@ function do_login() {
     if ($row = mysqli_fetch_assoc($result)) {
         $_SESSION["memid"] = $row["MemId"];
         $_SESSION["fullname"] = $row["MemFullname"];
-        if ($cart == 'yes'){
-            redirect("../receiver.php");
-        } else{
-        redirect("../index.php");
-        }
+        redirect("../index.php");    
     } else {
         redirect("../login.php?error=1");
     }

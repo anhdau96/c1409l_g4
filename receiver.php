@@ -2,15 +2,46 @@
 require_once 'inc_header.php';
 if (isset($_SESSION["fullname"])) {
     $timezone = +7;
+    $query = "SELECT * FROM Food WHERE FoodId IN (";
+    $comma = "";
+
+
+    foreach ($_SESSION["cart"] as $key => $value) {
+        $query .= $comma . $key;
+        $comma = ",";
+    }
+    $query .= ")";
+    $rs = execute_query($query);
+    $totalprice = 0;
+            if (isset($_SESSION["cart"])) {
+                while ($row = mysqli_fetch_assoc($rs)) 
+                        $totalprice += ($_SESSION["cart"][$row["FoodId"]] * $row["FoodPrice"]);
+                }
+    $result = execute_query("SELECT * FROM TypePay");
     ?>
-    <form action="admin/process/order.php?do=add_new" method="post">
+    <form action="order.php?do=add_new" method="post">
         <table>
+            <tr>
+                <th>
+                    Mã số khách hàng
+                </th>
+                <td>
+                    <input type="text" name="memid" value="<?php echo($_SESSION["memid"])?>" readonly/>
+                </td>
+            </tr>
             <tr>
                 <th>
                     Phương thức thanh toán
                 </th>
                 <td>
-                    <input type="text" name="typeid" />
+                    <select name="typeid">
+                        <?php while (($row = mysqli_fetch_assoc($result))) {
+                        ?>                    
+                        <option value="<?php echo $row["TypePayId"] ?>"><?php echo $row["TypePayName"] ?></option>
+                        <?php
+                        }
+                        ?>
+                    </select>                   
                 </td>
             </tr>
             <tr>
@@ -48,6 +79,14 @@ if (isset($_SESSION["fullname"])) {
                 </td>
             </tr>
             <tr>
+                <th>
+                    Tổng hóa đơn
+                </th>   
+                <td>
+                    <input type="text" name="price" value="<?php echo($totalprice)?>" readonly />
+                </td> 
+            </tr>
+            <tr>
                 <th colspan="2">
                     <input type="submit" value="Gửi đặt hàng" />
                 </th>
@@ -57,7 +96,7 @@ if (isset($_SESSION["fullname"])) {
 
     <?php
 } else {
-    redirect("login.php?cart=yes");
+    redirect("login.php");
 }
 
 require_once 'inc_footer.php';

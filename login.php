@@ -102,7 +102,7 @@ require_once 'include/process.php';
 			   <div class="col-md-6 login-right wow fadeInRight" data-wow-delay="0.4s">
 			  	<h3>Đã có tài khoản?</h3>
 				<p>Hãy nhập thông tin tài khoản của bạn</p>
-                                <form action="user/user.php?do=do_login&cart=<?php echo get("cart")?>" method="post">
+                                <form action="user/user.php?do=do_login" method="post">
 				  <div>
 					<span>Địa chỉ Email<label>*</label></span>
 					<input type="text" name="email"> 

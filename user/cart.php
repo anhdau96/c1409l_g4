@@ -40,3 +40,4 @@ function delete() {
     $_SESSION["cart"] = $cart;
     redirect("../cart_view.php");
 }
+
