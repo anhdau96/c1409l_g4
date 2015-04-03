@@ -1,26 +1,26 @@
 <?php
 require_once 'admin/inc_header.php';
 
-$adminid = get("adminid");
+$orderid = get("orderd");
 
-$result = execute_query("SELECT * FROM `Admin` WHERE `AdminId` =$adminid");
+$result = execute_query("SELECT * FROM `Order` WHERE `OrderId` =$orderid");
 
 if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
 }
 ?>
-<form action="process/admin?do=update" method="post">
+<form action="process/order?do=update" method="post">
     <table>
         <tr>
             <th>Admin Id</th>
-            <td><input type="text" name="adminid" id="adminid" readonly
-                       value="<?php echo get("adminid") ?>" /></td>
+            <td><input type="text" name="orderid" id="adminid" readonly
+                       value="<?php echo get("orderid") ?>" /></td>
         </tr>
 
         <tr>
-            <th>Username</th>
-            <td><input type="text" name="username" id="username"
-                       value="<?php echo $row["AUsername"] ?>" /></td>
+            <th>Mem Id</th>
+            <td><input type="text" name="memid" id="username" readonly
+                       value="<?php echo $row["MemId"] ?>" /></td>
         </tr>
 
         <tr>

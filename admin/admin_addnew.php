@@ -1,11 +1,11 @@
 <?php
-require 'inc_header.php';
+require_once 'admin/inc_header.php';
 ?>
 <h1>
     Thêm mới Admin
 </h1>
 <br />
-<form action="process/admin.php?do=add_new" method="post">
+<form action="process/admin?do=add_new" method="post">
     <table>
         <tr>
             <th>Username</th>
@@ -45,5 +45,5 @@ require 'inc_header.php';
     </table>
 </form>
 <?php
-require 'inc_footer.php';
+require_once 'admin/inc_footer.php';
 ?>

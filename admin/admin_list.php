@@ -1,5 +1,6 @@
 <?php
-require_once 'inc_header.php';
+require_once 'admin/inc_header.php';
+
 // tao ra query, phai chay trong navicat truoc
 $query1 = "SELECT * FROM `Admin`";
 
@@ -40,5 +41,5 @@ $result = execute_query($query1);
 <a href="admin_addnew">Thêm mới admin</a>
 
 <?php
-require 'inc_footer.php';
+require_once 'admin/inc_footer.php';
 ?>

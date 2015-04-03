@@ -1,5 +1,5 @@
 <?php
-require 'inc_header.php';
+require_once 'admin/inc_header.php';
 
 // tao ra query, phai chay trong navicat truoc
 $query1 = "SELECT * FROM `Restaurant`";
@@ -29,13 +29,13 @@ $result = execute_query($query1);
             <td><?php echo $row["ResManager"] ?></td>
             <td><a href="restaurant_edit?resid=<?php echo $row["ResId"] ?>">Cập
             nhật</a></td>
-             <td><a href="process/admin?action=delete?resid=<?php echo $row["ResId"] ?>">X</a> </td>
+            <td><a href="process/restaurant?do=delete&resid=<?php echo $row["ResId"] ?>">X</a> </td>
         </tr>	
     <?php } ?>	
 </table>
 
-<a href="restaurant_addnew">Thêm mới cửa hàng</a>
+<a href="restaurant_addnew.php">Thêm mới cửa hàng</a>
 
 <?php
-require 'inc_footer.php';
+require_once 'admin/inc_footer.php';
 ?>

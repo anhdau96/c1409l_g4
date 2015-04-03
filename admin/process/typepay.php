@@ -1,13 +1,13 @@
 <?php
-
 require_once 'include/process.php';
-
+    
 function add_new() {
     // KHÔNG dung nhu the nay
     // $username = $_POST['username'];
     $typepayname = post("typepayname");
     
     execute_query("INSERT INTO `TypePay` VALUES (NULL, '$typepayname')");
+    
     redirect("../typepay_list");
 }
 

@@ -1,5 +1,6 @@
 <?php
-require_once 'inc_all.php';
+require_once 'include/config.php';
+require_once 'include/functions.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -51,9 +52,9 @@ require_once 'inc_all.php';
 			<div class="container">
 				<div class="top-menu">
 					<ul>
-                                            <li><a href="index.php">Trang chủ</a></li>|
+                                                <li><a href="home.php">Trang chủ</a></li>|
 						<li><a href="menu.php">Thực Đơn</a></li>|
-						<li><a href="Order.php">Đặt hàng</a></li>|
+						<li><a href="order.php">Đặt hàng</a></li>|
 						<li><a href="contact.php">Liên Hệ</a></li>
 						<div class="clearfix"></div>
 					</ul>
@@ -62,7 +63,7 @@ require_once 'inc_all.php';
 					<ul>
 						<li><a href="login.php">Đăng nhập</a>  </li> |
 						<li><a href="register.php">Đăng kí</a> </li> |
-						<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Giỏ Hàng</a></li>
+						<li><a href="cart_view.php"><span class="glyphicon glyphicon-shopping-cart"></span>Giỏ Hàng</a></li>
 						<div class="clearfix"></div>
 					</ul>
 				</div>

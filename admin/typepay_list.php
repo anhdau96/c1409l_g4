@@ -1,5 +1,5 @@
 <?php
-require 'inc_header.php';
+require_once 'admin/inc_header.php';
 
 // tao ra query, phai chay trong navicat truoc
 $query1 = "SELECT * FROM `Typepay`";
@@ -23,7 +23,7 @@ $result = execute_query($query1);
             <td><?php echo $row["TypePayName"] ?></td>
             <td><a href="typepay_edit?typepayid=<?php echo $row["TypePayId"] ?>">Cập
             nhật</a></td>
-            <td><a href="process/contact?do=delete&typepayid=<?php echo $row["TypePayId"] ?>">X</a></td> 
+            <td><a href="process/typepay?do=delete&typepayid=<?php echo $row["TypePayId"] ?>">X</a></td> 
         </tr>	
     <?php } ?>	
 </table>
@@ -31,5 +31,5 @@ $result = execute_query($query1);
 <a href="typepay_addnew">Thêm mới kiểu thanh toán</a>
 
 <?php
-require 'inc_footer.php';
+require_once 'admin/inc_footer.php';
 ?>

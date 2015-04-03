@@ -1,5 +1,5 @@
 <?php
-require 'inc_header.php';
+require_once 'admin/inc_header.php';
 ?>
 <h1>
     Thêm mới kiểu thanh toán
@@ -18,5 +18,5 @@ require 'inc_header.php';
     </table>
 </form>
 <?php
-require 'inc_footer.php';
+require_once 'admin/inc_footer.php';
 ?>

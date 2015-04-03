@@ -1,5 +1,5 @@
 <?php
-require 'inc_header.php';
+require_once 'admin/inc_header.php';
 
 $result = execute_query("SELECT * FROM TypeFood");
 
@@ -52,5 +52,5 @@ $result = execute_query("SELECT * FROM TypeFood");
     </table>
 </form>
 <?php
-require 'inc_footer.php';
+require_once 'admin/inc_footer.php';
 ?>

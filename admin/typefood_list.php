@@ -1,5 +1,5 @@
 <?php
-require 'inc_header.php';
+require_once 'admin/inc_header.php';
 
 // tao ra query, phai chay trong navicat truoc
 $query1 = "SELECT * FROM `TypeFood`";
@@ -23,7 +23,7 @@ $result = execute_query($query1);
             <td><?php echo $row["TypeId"] ?></td>
             <td><?php echo $row["TypeName"] ?></td>
             <td><?php echo $row["TypeDescription"] ?></td>
-            <td><a href="typefood_edit?typeid=<?php echo $row["TypeId"] ?>">Cập
+            <td><a href="typefood?typeid=<?php echo $row["TypeId"] ?>">Cập
             nhật</a></td>
             <td><a href="process/typefood?do=delete&typeid=<?php echo $row["TypeId"] ?>">X</a></td> 
         </tr>	
@@ -33,5 +33,5 @@ $result = execute_query($query1);
 <a href="typefood_addnew">Thêm mới kiểu đồ ăn</a>
 
 <?php
-require 'inc_footer.php';
+require_once 'admin/inc_footer.php';
 ?>

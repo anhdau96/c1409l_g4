@@ -1,5 +1,5 @@
 <?php
-require_once 'inc_header.php';
+require_once 'admin/inc_header.php';
 
 $typepayid = get("typeid");
 
@@ -29,5 +29,5 @@ if (mysqli_num_rows($result) > 0) {
     </table>
 </form>
 <?php
-require 'inc_footer.php';
+require_once 'admin/inc_footer';
 ?>

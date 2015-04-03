@@ -9,12 +9,12 @@ function add_new() {
     $feedtitle = post("feedtitle");
     $feedcontent = post("feedcontent");
     execute_query("INSERT INTO `FeedBack` VALUES (NULL, '$feedname','$feedemail','$feedtitle','$feedcontent')");
-    redirect("../feedback_list.php");
+    redirect("../feedback_list");
 }
 
 
 function delete() {
     $feedid= get("feedid");
     execute_query("DELETE FROM `FeedBack` WHERE FeedId='$feedid'");
-    redirect("../feedback_list.php");
+    redirect("../feedback_list");
 }

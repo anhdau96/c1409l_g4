@@ -1,6 +1,7 @@
 <?php
-require 'inc_header.php';
+require_once 'admin/inc_header.php';
 ?>
+
 <h1>
     Thêm mới loại đồ ăn
 </h1>
@@ -24,5 +25,5 @@ require 'inc_header.php';
     </table>
 </form>
 <?php
-require 'inc_footer.php';
+require_once 'admin/inc_footer.php';
 ?>

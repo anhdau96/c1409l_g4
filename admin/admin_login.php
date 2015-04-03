@@ -1,14 +1,11 @@
-<?php
-require_once '../inc_all.php';
-?>
 <!doctype html>
 <html>
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="css/bootstrap.min.css") rel="stylesheet">
- <link href="css/admin_login.css") rel="stylesheet" type="text/css" media="all" />
+<link href="<?php base_url("admin/css/bootstrap.min.css")?>" rel="stylesheet">
+ <link href="<?php base_url("admin/css/admin_login.css") ?>" rel="stylesheet" type="text/css" media="all" />
 <title>Admin Login</title>
 </head>
 <body>
@@ -20,7 +17,7 @@ require_once '../inc_all.php';
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
                     <div class="panel-body">
-	<form role="form" action="process/admin.php?do=do_login" method="post">
+	<form role="form" action="process/admin?do=do_login" method="post">
 		<fieldset>
                     <div class="form-group">
                         <input class="form-control" placeholder="Username" name="username" type="text" autofocus>
@@ -51,10 +48,10 @@ require_once '../inc_all.php';
             </div>
         </div>
     </div>
-    <script src="../js/jquery-2.1.1.min"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/metisMenu.min.js"></script>
-    <script src="../js/admin2.js"></script>
+    <script src="<?php base_url("js/jquery-2.1.1.min") ?>"></script>
+    <script src="<?php base_url("js/bootstrap.min.js") ?>"></script>
+    <script src="<?php base_url("js/metisMenu.min.js") ?>"></script>
+    <script src="<?php base_url("js/admin2.js") ?>"></script>
 </body>
 </html>
 

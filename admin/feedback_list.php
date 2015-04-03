@@ -1,5 +1,5 @@
 <?php
-require 'inc_header.php';
+require_once 'admin/inc_header.php';
 
 // tao ra query, phai chay trong navicat truoc
 $query1 = "SELECT * FROM `FeedBack`";
@@ -26,11 +26,11 @@ $result = execute_query($query1);
             <td><?php echo $row["FeedTitle"] ?></td>
             <td><?php echo $row["FeedEmail"] ?></td>
             <td><?php echo $row["FeedContent"] ?></td>
-             <td><a href="process/admin?action=delete?feedid=<?php echo $row["FeedId"] ?>">X</a> </td>
+            <td><a href="process/feedback?action=delete?feedid=<?php echo $row["FeedId"] ?>">X</a> </td>
         </tr>	
     <?php } ?>	
 </table>
 
 <?php
-require 'inc_footer.php';
+require_once 'admin/inc_footer.php';
 ?>

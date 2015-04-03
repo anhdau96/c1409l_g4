@@ -1,4 +1,4 @@
-<?php
+<?php 
 require_once 'inc_header.php';
 
 $choose= get("choose");

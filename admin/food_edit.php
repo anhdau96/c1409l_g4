@@ -1,5 +1,5 @@
 <?php
-require_once 'inc_header.php';
+require_once 'admin/inc_header.php';
 
 $foodid = get("foodid");
 
@@ -66,5 +66,5 @@ if (mysqli_num_rows($result) > 0) {
     </table>
 </form>
 <?php
-require 'inc_footer.php';
+require_once 'admin/inc_footer.php';
 ?>

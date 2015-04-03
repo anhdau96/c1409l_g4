@@ -1,9 +1,10 @@
 <?php
-require 'inc_header.php';
+require_once 'admin/inc_header.php';
 
 $name = get("search_food");
 $choice = get("choice");
 ?>
+
 <h1>Food Search</h1>
 <br />
 <form action="" method="get">
@@ -78,7 +79,7 @@ if ($name != "") {
                     <td><?php echo $row["FoodImage"] ?></td>            
                     <td><?php echo $row["FoodPrice"] ?></td>
                     <td><a href="food_edit?foodid=<?php echo $row["FoodId"] ?>">Cập nhật</a></td>
-                    <td><a href="process/food?do=delete&foodid=<?php echo $row["FoodId"] ?>">X</a> </td>
+                    <td><a href="process/foods?do=delete&foodid=<?php echo $row["FoodId"] ?>">X</a> </td>
                 </tr>
         <?php }
         ?>
@@ -90,5 +91,5 @@ if ($name != "") {
     ?>
 
 <?php
-require 'inc_footer.php';
+require_once 'admin/inc_footer.php';
 ?>

@@ -1,5 +1,5 @@
 <?php
-require 'inc_header.php';
+require_once 'admin/inc_header.php';
 
 //Paging
 $n = get("page");
@@ -48,8 +48,8 @@ for ($i=1;$i<=$total_page; $i++) {
     <?php } ?>	
 </table>
 
-<h2><a href="food_addnew">Thêm mới đồ ăn</a></h2>
+<h2><a href="food_addnew.php">Thêm mới đồ ăn</a></h2>
 
 <?php
-require 'inc_footer.php';
+require_once 'admin/inc_footer.php';
 ?>

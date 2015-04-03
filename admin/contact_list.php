@@ -1,5 +1,6 @@
 <?php
-require 'inc_header.php';
+require_once 'admin/inc_header.php';
+
 // tao ra query, phai chay trong navicat truoc
 $query1 = "SELECT * FROM `Contact`";
 
@@ -40,5 +41,5 @@ $result = execute_query($query1);
 <a href="contact_addnew">Thêm mới liên hệ</a>
 
 <?php
-require 'inc_footer.php';
+require_once 'admin/inc_footer.php';
 ?>
