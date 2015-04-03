@@ -1,3 +1,8 @@
+<?php
+require_once 'include/config.php';
+require_once 'include/functions.php';
+require_once 'include/process.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,7 +55,7 @@
 					<ul>
                                                 <li><a href="home.php">Trang chủ</a></li>|
 						<li><a href="menu.php">Thực Đơn</a></li>|
-						<li><a href="Order.php">Đặt Bàn</a></li>|
+						<li><a href="order.php">Đặt Bàn</a></li>|
 						<li><a href="contact.php">Liên Hệ</a></li>
 						<div class="clearfix"></div>
 					</ul>
@@ -96,17 +101,26 @@
 			   <div class="col-md-6 login-right wow fadeInRight" data-wow-delay="0.4s">
 			  	<h3>Đã có tài khoản?</h3>
 				<p>Hãy nhập thông tin tài khoản của bạn</p>
-				<form>
+                                <form action="user/user.php?do=do_login" method="post">
 				  <div>
 					<span>Địa chỉ Email<label>*</label></span>
-					<input type="text"> 
+					<input type="text" name="email"> 
 				  </div>
 				  <div>
 					<span>Mật khẩu<label>*</label></span>
-					<input type="text"> 
+					<input type="password" name="password"> 
 				  </div>
 				  <a class="forgot" href="#">Quên mật khẩu</a>
 				  <input type="submit" value="Đăng nhập">
+                                  <?php
+                                    if (get("error") == 1) {
+					echo "Đăng nhập không thành công";
+                                    } else  if(get("error") == 2) {
+					echo "Bạn phải đăng nhập mới vào được";
+                                    } else  if(get("error") == 3) {
+					echo "Bạn đã ra khỏi hệ thống";
+                                    }
+				?>
 			    </form>
 			   </div>	
 			   <div class="clearfix"> </div>

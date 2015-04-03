@@ -1,7 +1,7 @@
 <?php 
 require_once '../include/config.php';
 require_once '../include/functions.php';
-
+require_once '../include/process.php';
 
 function add_new() {
     // KHÔNG dung nhu the nay
@@ -18,15 +18,15 @@ function add_new() {
 }
 
 function do_login() {
-    $mememail = post("mememail");
+    $email = post("email");
     $password = post("password");
-    $query = "SELECT * FROM `Member` WHERE `MemEmail`='$mememail' AND `APassword`='$password'";
+    $query = "SELECT * FROM `Member` WHERE `MemEmail`='$email' AND `MemPassword`='$password'";
 
     //echo $query;	
     $result = execute_query($query);
 
     if ($row = mysqli_fetch_assoc($result)) {
-        $_SESSION["mememail"] = $mememail;
+        $_SESSION["fullname"] = $row["MemFullname"];
 
         redirect("../index.php");
     } else {
@@ -35,6 +35,6 @@ function do_login() {
 }
 
 function logout() {
-    unset($_SESSION["username"]);
-    redirect("../login.php?error=3");
+    unset($_SESSION["fullname"]);
+    redirect("../index.php");
 }

@@ -78,7 +78,7 @@ for ($i=1;$i<=$total_page; $i++) {
       <p style="font-family: Monotype Corsiva"><?php echo $row["FoodPrice"]?> VNĐ</p>
     </div>
     <div class="col-md-3"> 
-      <p><a href="#" class="btn btn-info btn-lg">
+      <p><a href="user/cart.php?do=add&choose=<?php echo $choose?>&page=<?php echo $n?>&foodid=<?php echo $row["FoodId"]?>" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-shopping-cart"></span>Cho vào giỏ hàng
         </a></p>
     </div>
