@@ -1,5 +1,7 @@
-<?php
-require_once '../inc_all.php';
+<?php 
+require_once '../include/config.php';
+require_once '../include/functions.php';
+
 
 function add_new() {
     // KHÔNG dung nhu the nay
@@ -11,28 +13,28 @@ function add_new() {
     $phone = post("phone");
     
     execute_query("INSERT INTO `Member` VALUES (NULL, '$email','$password','$fullname','$address','$phone')");
-    
-    redirect("index.php");
+     
+    redirect("../index.php");
 }
 
 function do_login() {
-    $username = post("username");
+    $mememail = post("mememail");
     $password = post("password");
-    $query = "SELECT * FROM `Admin` WHERE `AUsername`='$username' AND `APassword`='$password'";
+    $query = "SELECT * FROM `Member` WHERE `MemEmail`='$mememail' AND `APassword`='$password'";
 
     //echo $query;	
     $result = execute_query($query);
 
     if ($row = mysqli_fetch_assoc($result)) {
-        $_SESSION["username"] = $username;
+        $_SESSION["mememail"] = $mememail;
 
-        redirect("../admin_list");
+        redirect("../index.php");
     } else {
-        redirect("../admin_login?error=1");
+        redirect("../login.php?error=1");
     }
 }
 
 function logout() {
     unset($_SESSION["username"]);
-    redirect("../admin_login?error=3");
+    redirect("../login.php?error=3");
 }

@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once 'inc_header.php';
 
 $choose= get("choose");
@@ -30,8 +30,8 @@ $total_page = ceil($total / PAGE_ROW);
 	<!-- content-section-starts -->
         <div class="container">
             <div class="jumbotron">
-                <h1 style="font-family: Monotype Corsiva">MENU</h1>      
-                <p>Thực đơn có thể được thay đổi mỗi ngày</p>
+                <h1 style="font-family: Monotype Corsiva;color: red">MENU</h1>      
+                <p style="color: green">Thực đơn có thể được thay đổi mỗi ngày</p>
                 
     <ul class="nav nav-tabs">
     <li class="<?php if ($choose=='appetizer' || $choose == '') echo "active" ?>"><a href="menu.php?page=1&choose=appetizer">Khai vị</a></li>
@@ -43,7 +43,7 @@ for ($i=1;$i<=$total_page; $i++) {
   echo "<a href='?page=$i&choose=$choose'>$i</a> | ";   
 }
 ?>
-  <div class="row">
+    <div class="row" style="color: blueviolet">
     <div class="col-md-2">
       <p>Loại món ăn</p>
     </div>
@@ -64,18 +64,18 @@ for ($i=1;$i<=$total_page; $i++) {
 <?php 
     while ($row = mysqli_fetch_assoc($result)){
 ?>
-  <div class="row">
+  <div class="row" style="color: palevioletred">
     <div class="col-md-2">
-      <p><?php echo $row["TypeName"]?></p>
+      <p style="font-family: Monotype Corsiva"><?php echo $row["TypeName"]?></p>
     </div>
     <div class="col-md-2"> 
-      <p><?php echo $row["FoodName"]?></p>
+      <p style="font-family: Monotype Corsiva"><?php echo $row["FoodName"]?></p>
     </div>
     <div class="col-md-3"> 
-      <p><?php echo $row["FoodDescription"]?></p>
+      <p style="font-family: Monotype Corsiva"><?php echo $row["FoodDescription"]?></p>
     </div>
     <div class="col-md-2"> 
-      <p><?php echo $row["FoodPrice"]?> VNĐ</p>
+      <p style="font-family: Monotype Corsiva"><?php echo $row["FoodPrice"]?> VNĐ</p>
     </div>
     <div class="col-md-3"> 
       <p><a href="#" class="btn btn-info btn-lg">
@@ -93,60 +93,60 @@ for ($i=1;$i<=$total_page; $i++) {
 			<div class="container">
 				<div class="contact-section-grids">
 					<div class="col-md-3 contact-section-grid wow fadeInLeft" data-wow-delay="0.4s">
-						<h4>Chi nhánh 1</h4>
+						<h4>Trụ sở chính</h4>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Giới thiệu</a></li>
+                                                        <li class="data"><a href="about.php">Giới thiệu</a></li>
 						</ul>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Liên hệ</a></li>
+                                                        <li class="data"><a href="contact.php">Liên hệ</a></li>
 						</ul>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Chính sách</a></li>
+                                                        <li class="data"><a href="privacy.php">Chính sách bảo mật</a></li>
 						</ul>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Điều khoản</a></li>
+                                                        <li class="data"><a href="term.php">Điều khoản</a></li>
 						</ul>
 					</div>
 					<div class="col-md-3 contact-section-grid wow fadeInLeft" data-wow-delay="0.4s">
-						<h4>Chi nhánh 2</h4>
+						<h4>Chi nhánh</h4>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Giới thiệu</a></li>
+                                                        <li class="data"><a href="about.php">Giới thiệu</a></li>
 						</ul>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Liên hệ</a></li>
+                                                        <li class="data"><a href="contact.php">Liên hệ</a></li>
 						</ul>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Chính sách</a></li>
+                                                        <li class="data"><a href="privacy.php">Chính sách bảo mật</a></li>
 						</ul>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Điều khoản</a></li>
+                                                        <li class="data"><a href="term.php">Điều khoản</a></li>
 						</ul>
 					</div>
 					<div class="col-md-3 contact-section-grid wow fadeInRight" data-wow-delay="0.4s">
 						<h4>Theo dõi trên...</h4>
 						<ul>
 							<li><i class="fb"></i></li>
-							<li class="data"> <a href="https://www.facebook.com/">Facebook</a></li>
+                                                        <li class="data"> <a href="https://www.facebook.com/"><img src="imgs/facebook.png"/>Facebook</a></li>
 						</ul>
 						<ul>
 							<li><i class="tw"></i></li>
-							<li class="data"> <a href="https://www.twitter.com/">Twitter</a></li>
+                                                        <li class="data"> <a href="https://www.twitter.com/"><img src="imgs/twitter.png"/>Twitter</a></li>
 						</ul>
 						<ul>
 							<li><i class="in"></i></li>
-							<li class="data"><a href="https://Zing.vn">Zing</a></li>
+                                                        <li class="data"><a href="https://Zing.vn"><img src="imgs/zing.png"/>Zing</a></li>
 						</ul>
 						<ul>
 							<li><i class="gp"></i></li>
-							<li class="data"><a href="https://plus.google.com">Google Plus</a></li>
+                                                        <li class="data"><a href="https://plus.google.com"><img src="imgs/google-plus.png"/>Google Plus</a></li>
 						</ul>
 					</div>
 					<div class="col-md-3 contact-section-grid nth-grid wow fadeInRight" data-wow-delay="0.4s">

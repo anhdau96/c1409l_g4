@@ -30,46 +30,6 @@
 		</script>
 <script src="js/user js/jquery.carouFredSel-6.1.0-packed.js"></script>
 <script src="js/user js/tms-0.4.1.js"></script>
-<script>
- $(window).load(function(){
-      $('.slider')._TMS({
-              show:0,
-              pauseOnHover:false,
-              prevBu:'.prev',
-              nextBu:'.next',
-              playBu:false,
-              duration:800,
-              preset:'fade', 
-              pagination:true,//'.pagination',true,'<ul></ul>'
-              pagNums:false,
-              slideshow:8000,
-              numStatus:false,
-              banners:false,
-          waitBannerAnimation:false,
-        progressBar:false
-      })  
-      });
-      
-     $(window).load (
-    function(){$('.carousel1').carouFredSel({auto: false,prev: '.prev',next: '.next', width: 960, items: {
-      visible : {min: 1,
-       max: 4
-},
-height: 'auto',
- width: 240,
-
-    }, responsive: false, 
-    
-    scroll: 1, 
-    
-    mousewheel: false,
-    
-    swipe: {onMouse: false, onTouch: false}});
-    
-    
-    });      
-
-     </script>
 <script src="../js/user js/jquery.easydropdown.js"></script>
 </head>
 <body>
@@ -91,9 +51,9 @@ height: 'auto',
 			<div class="container">
 				<div class="top-menu">
 					<ul>
-						<li class="active"><a href="#Home" class="scroll">Trang chủ</a></li>|
+                                                <li><a href="home.php">Trang chủ</a></li>|
 						<li><a href="menu.php">Thực Đơn</a></li>|
-						<li><a href="Order.php">Đặt hàng</a></li>|
+						<li><a href="Order.php">Đặt Bàn</a></li>|
 						<li><a href="contact.php">Liên Hệ</a></li>
 						<div class="clearfix"></div>
 					</ul>
@@ -102,7 +62,7 @@ height: 'auto',
 					<ul>
 						<li><a href="login.php">Đăng nhập</a>  </li> |
 						<li><a href="register.php">Đăng kí</a> </li> |
-						<li><a href="#">Trợ giúp</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Giỏ Hàng</a></li>
 						<div class="clearfix"></div>
 					</ul>
 				</div>
@@ -115,44 +75,35 @@ height: 'auto',
 		<div class="ordering-form">
 			<div class="container">
 			<div class="order-form-head text-center wow bounceInLeft" data-wow-delay="0.4s">
-						<h3>Đơn đặt hàng</h3>
-						<p>Hãy đặt hàng cho chúng tôi ngay hôm nay</p>
+						<h3>Đơn đặt bàn</h3>
+						<p>Hãy đặt bàn cho chúng tôi ngay hôm nay</p>
 					</div>
 				<div class="col-md-6 order-form-grids">
 					
 					<div class="order-form-grid  wow fadeInLeft" data-wow-delay="0.4s">
-						<h5>Thông tin đơn hàng</h5>
-								<span>Loại Sản phẩm</span>
+						<h5>Thông tin đơn </h5>
+								<span>Loại bàn</span>
 								 <div class="dropdown-button">           			
-            			<select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}'>
+            			<select class="dropdown">
             			<option value="0">Chọn</option>	
-						<option value="1">Giao hàng</option>
-						<option value="2">Phục vụ tại nhà hàng</option>
+						<option value="1">Thường</option>
+						<option value="2">Vip</option>
 					  </select>
 					</div>
 		              <span>Địa điểm nhà hàng</span>
 					   <div class="dropdown-button wow">           			
-            			<select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}'>
+            			<select class="dropdown">
             			<option value="0">Nhà A phố B số 69</option>	
 						<option value="1">Nhà X phố Y số 320</option>
 					  </select> 
 					</div>
 					<span>Tên địa điểm</span>
 								 <div class="dropdown-button">           			
-            			<select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}'>
+            			<select class="dropdown">
             			<option value="0">Hà Nội</option>	
-						<option value="1">Tp Hồ Chí Minh</option>
-						<option value="2">Đà Nẵng</option>
+						<option value="1">Tp Hồ Chí Minh</option>						
 					  </select>
-					</div>
-					<span>Tên món ăn</span>
-					   <div class="dropdown-button">           			
-            			<select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}'>
-            			<option value="0">Tên món ăn</option>	
-						<option value="1">Món ăn 1</option>
-						<option value="2">Món ăn 2</option>
-					  </select> 
-					</div>
+					</div>				
 					<input type="text" class="text" value="Time" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Time';}"><br>
 					<div class="wow swing animated" data-wow-delay= "0.4s">
 					<input type="button" value="Đặt ngay">

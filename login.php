@@ -48,9 +48,9 @@
 			<div class="container">
 				<div class="top-menu">
 					<ul>
-						<li class="active"><a href="#Home" class="scroll">Trang chủ</a></li>|
+                                                <li><a href="home.php">Trang chủ</a></li>|
 						<li><a href="menu.php">Thực Đơn</a></li>|
-						<li><a href="Order.php">Đặt hàng</a></li>|
+						<li><a href="Order.php">Đặt Bàn</a></li>|
 						<li><a href="contact.php">Liên Hệ</a></li>
 						<div class="clearfix"></div>
 					</ul>
@@ -59,7 +59,7 @@
 					<ul>
 						<li><a href="login.php">Đăng nhập</a>  </li> |
 						<li><a href="register.php">Đăng kí</a> </li> |
-						<li><a href="#">Trợ giúp</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Giỏ Hàng</a></li>
 						<div class="clearfix"></div>
 					</ul>
 				</div>
@@ -118,60 +118,60 @@
 			<div class="container">
 				<div class="contact-section-grids">
 					<div class="col-md-3 contact-section-grid wow fadeInLeft" data-wow-delay="0.4s">
-						<h4>Chi nhánh 1</h4>
+						<h4>Trụ sở chính</h4>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Giới thiệu</a></li>
+                                                        <li class="data"><a href="about.php">Giới thiệu</a></li>
 						</ul>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Liên hệ</a></li>
+                                                        <li class="data"><a href="contact.php">Liên hệ</a></li>
 						</ul>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Chính sách</a></li>
+                                                        <li class="data"><a href="privacy.php">Chính sách bảo mật</a></li>
 						</ul>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Điều khoản</a></li>
+                                                        <li class="data"><a href="term.php">Điều khoản</a></li>
 						</ul>
 					</div>
 					<div class="col-md-3 contact-section-grid wow fadeInLeft" data-wow-delay="0.4s">
-						<h4>Chi nhánh 2</h4>
+						<h4>Chi nhánh</h4>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Giới thiệu</a></li>
+                                                        <li class="data"><a href="about.php">Giới thiệu</a></li>
 						</ul>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Liên hệ</a></li>
+                                                        <li class="data"><a href="contact.php">Liên hệ</a></li>
 						</ul>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Chính sách</a></li>
+                                                        <li class="data"><a href="privacy.php">Chính sách bảo mật</a></li>
 						</ul>
 						<ul>
 							<li><i class="point"></i></li>
-							<li class="data"><a href="#">Điều khoản</a></li>
+                                                        <li class="data"><a href="term.php">Điều khoản</a></li>
 						</ul>
 					</div>
 					<div class="col-md-3 contact-section-grid wow fadeInRight" data-wow-delay="0.4s">
 						<h4>Theo dõi trên...</h4>
 						<ul>
 							<li><i class="fb"></i></li>
-							<li class="data"> <a href="https://www.facebook.com/">Facebook</a></li>
+                                                        <li class="data"> <a href="https://www.facebook.com/"><img src="imgs/facebook.png"/>Facebook</a></li>
 						</ul>
 						<ul>
 							<li><i class="tw"></i></li>
-							<li class="data"> <a href="https://www.twitter.com/">Twitter</a></li>
+                                                        <li class="data"> <a href="https://www.twitter.com/"><img src="imgs/twitter.png"/>Twitter</a></li>
 						</ul>
 						<ul>
 							<li><i class="in"></i></li>
-							<li class="data"><a href="https://Zing.vn">Zing</a></li>
+                                                        <li class="data"><a href="https://Zing.vn"><img src="imgs/zing.png"/>Zing</a></li>
 						</ul>
 						<ul>
 							<li><i class="gp"></i></li>
-							<li class="data"><a href="https://plus.google.com">Google Plus</a></li>
+                                                        <li class="data"><a href="https://plus.google.com"><img src="imgs/google-plus.png"/>Google Plus</a></li>
 						</ul>
 					</div>
 					<div class="col-md-3 contact-section-grid nth-grid wow fadeInRight" data-wow-delay="0.4s">
