@@ -9,6 +9,10 @@ if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
 }
 ?>
+<h1 style="text-align: center">
+    Cập nhập kiểu đồ ăn
+</h1>
+<br />
 <form action="process/typefood?do=update" method="post">
     <table>
         <tr>
@@ -30,8 +34,8 @@ if (mysqli_num_rows($result) > 0) {
                        value="<?php echo $row["TypeDescription"] ?>" /></td>
         
         <tr>
-            
-            <th><input type="submit" value="Cập nhật" /></th>
+            <td></td>
+            <td><input type="submit" value="Cập nhật" /></td>
 
         </tr>
     </table>

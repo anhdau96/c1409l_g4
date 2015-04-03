@@ -2,7 +2,7 @@
 
             </div>      
         </div>
-                <div class="push"></div>
+               
     
 		<div id="footer">
                     <h2 style="color: white"> Nhà Hàng: ATDragons </h2>

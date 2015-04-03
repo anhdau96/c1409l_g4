@@ -5,9 +5,9 @@ $name = get("search_food");
 $choice = get("choice");
 ?>
 
-<h1>Food Search</h1>
+<h1 style="text-align: center">Food Search</h1>
 <br />
-<form action="" method="get">
+<form style="text-align: center" action="" method="get">
     <input name="search_food" value="<?php echo get("search_food") ?>" type="text" />
     <select name="choice">
         <option value="FoodName" <?php echo $choice == 'FoodName' ? "selected" : "" ?>>Tên món ăn</option>

@@ -4,8 +4,8 @@ require_once 'admin/inc_header.php';
 $result = execute_query("SELECT * FROM TypeFood");
 
 ?>
-<h1>
-    Thêm mới đồ ăn
+<h1 style="text-align: center">
+    Thêm mới món ăn
 </h1>
 <br />
 <form action="process/food?do=add_new" method="post">
@@ -46,7 +46,7 @@ $result = execute_query("SELECT * FROM TypeFood");
         </tr>
 
         <tr>
-            <th><input type="submit" value="Thêm mới" /></th>
+            <td><input type="submit" value="Thêm mới" /></td>
             <td><input type="reset" value="Hủy" /></td>
         </tr>							
     </table>

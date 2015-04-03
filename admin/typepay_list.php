@@ -7,6 +7,10 @@ $query1 = "SELECT * FROM `Typepay`";
 // mysql
 $result = execute_query($query1);
 ?>
+<h1 style="text-align: center">
+    Danh sách kiểu thanh toán
+</h1>
+<br />
 <table border="1">
     <tr>
         <th>TypePay Id</th>
@@ -27,9 +31,9 @@ $result = execute_query($query1);
         </tr>	
     <?php } ?>	
 </table>
-
+<h5 style="text-align: center">
 <a href="typepay_addnew">Thêm mới kiểu thanh toán</a>
-
+</h5>
 <?php
 require_once 'admin/inc_footer.php';
 ?>

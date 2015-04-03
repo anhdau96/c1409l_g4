@@ -25,12 +25,12 @@ if (isset($_SESSION["cart"])) {
         ?>
     <div class="container">
             <div class="jumbotron">
-        <h1>Số lương món ăn trong giỏ hàng: 
+        <h2>Số lương món ăn trong giỏ hàng: 
             <?php
             echo $i;
         ?>
-    </h1>
-    <form action="#" method="post">
+        </h2>
+        <form action="receiver.php" method="post">
         <div class="row" style="color: blueviolet">
             <div class="col-md-2">
                 <p>Tên món ăn</p>
@@ -94,6 +94,8 @@ if (isset($_SESSION["cart"])) {
                         </div>
                 </div>
                 <hr />
+                
+                <h3 style="text-align: center"><input type="submit" value="Đặt hàng" /></h3>
 
     </form>
     </div>

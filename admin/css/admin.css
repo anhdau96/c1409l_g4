@@ -5,15 +5,7 @@ body{
    margin: 0;
    padding: 0;
    height: 100%; 
-}
-
-#wrapper {
-    width: 100%;
-    height: 100px;
-    text-align: right;
-    font-family: Tahoma;  
-    margin: 0;
-    padding: 0;
+   font-family: Tahoma;
 }
 #wrapper h2{
     margin: 0;
@@ -25,7 +17,7 @@ body{
 }
 #page-wrapper {
     padding: 0 0 0 250px;
-    min-height: 1000px;
+    height: 840px;
     background-color:white;
     
 }
@@ -70,15 +62,6 @@ body{
         overflow: auto;  
     }
 }
-
-#main{
-     float:left;
-     width:100%;   
-     height:1000px;
-     text-align:center; 
-  
-}
-
 table {
 	background: #f5f5f5;		
 	font-size: 12px;
@@ -100,6 +83,7 @@ th {
 	padding: 10px 15px;
 	position: relative;
         box-shadow:inset 2px 2px 2px #999;
+        text-align: center;
 	
 }
 td {
@@ -108,12 +92,14 @@ td {
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #e8e8e8;
 	padding: 10px 15px;
+        text-align: center;
 	position: relative;
 	transition: all 500ms;
 }
 tr:nth-child(odd) td {
 	background:#F2F2F2 ;	
 }
+
 
 #footer {
     text-align: center;

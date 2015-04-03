@@ -1,3 +1,9 @@
+<?php
+require_once 'include/config.php';
+require_once 'include/functions.php';
+require_once 'include/process.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,7 +65,7 @@
 					<ul>
 						<li><a href="login.php">Đăng nhập</a>  </li> |
 						<li><a href="register.php">Đăng kí</a> </li> |
-						<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Giỏ Hàng</a></li>
+						<li><a href="cart_view.php"><span class="glyphicon glyphicon-shopping-cart"></span>Giỏ Hàng</a></li>
 						<div class="clearfix"></div>
 					</ul>
 				</div>
@@ -96,14 +102,14 @@
 			   <div class="col-md-6 login-right wow fadeInRight" data-wow-delay="0.4s">
 			  	<h3>Đã có tài khoản?</h3>
 				<p>Hãy nhập thông tin tài khoản của bạn</p>
-				<form>
+                                <form action="user/user.php?do=do_login&cart=<?php echo get("cart")?>" method="post">
 				  <div>
 					<span>Địa chỉ Email<label>*</label></span>
-					<input type="text"> 
+					<input type="text" name="email"> 
 				  </div>
 				  <div>
 					<span>Mật khẩu<label>*</label></span>
-					<input type="text"> 
+                                        <input type="password" name="password"> 
 				  </div>
 				  <a class="forgot" href="#">Quên mật khẩu</a>
 				  <input type="submit" value="Đăng nhập">

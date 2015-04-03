@@ -20,7 +20,10 @@ for ($i=1;$i<=$total_page; $i++) {
   echo "<a href='?page=$i'>$i</a> | ";   
 }
 ?>
-
+<h1 style="text-align: center">
+    Danh sách món ăn
+</h1>
+<br />
 <table border="1">
     <tr>
         <th>Type Name</th>
@@ -48,7 +51,7 @@ for ($i=1;$i<=$total_page; $i++) {
     <?php } ?>	
 </table>
 
-<h2><a href="food_addnew.php">Thêm mới đồ ăn</a></h2>
+<h5 style="text-align: center"><a href="food_addnew">Thêm mới món ăn</a></h5>
 
 <?php
 require_once 'admin/inc_footer.php';

@@ -7,6 +7,10 @@ $query1 = "SELECT * FROM `Contact`";
 // mysql
 $result = execute_query($query1);
 ?>
+<h1 style="text-align: center">
+    Danh sách liên hệ
+</h1>
+<br />
 <table border="1">
     <tr>
         <th>Contact Id</th>
@@ -37,9 +41,9 @@ $result = execute_query($query1);
         </tr>	
     <?php } ?>	
 </table>
-
+<h5 style="text-align: center">
 <a href="contact_addnew">Thêm mới liên hệ</a>
-
+</h5>
 <?php
 require_once 'admin/inc_footer.php';
 ?>

@@ -62,9 +62,21 @@ require_once 'include/process.php';
 				</div>
 				<div class="login-section">
 					<ul>
+                                            <?php
+                                                if (isset($_SESSION["fullname"])) {
+                                            ?>
+                                                <li><a href="">Xin Chào, <?php echo $_SESSION["fullname"] ?></a>  </li> |
+                                                <li><a href="user/user.php?do=logout">Đăng xuất</a>  </li> |
+                                            <?php
+                                                }
+                                                else{
+                                            ?>    
 						<li><a href="login.php">Đăng nhập</a>  </li> |
 						<li><a href="register.php">Đăng kí</a> </li> |
-						<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Giỏ Hàng</a></li>
+                                            <?php
+                                                }
+                                            ?>
+						<li><a href="cart_view.php"><span class="glyphicon glyphicon-shopping-cart"></span>Giỏ Hàng</a></li>
 						<div class="clearfix"></div>
 					</ul>
 				</div>

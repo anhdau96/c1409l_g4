@@ -7,6 +7,10 @@ $query1 = "SELECT * FROM `TypeFood`";
 // mysql
 $result = execute_query($query1);
 ?>
+<h1 style="text-align: center">
+    Thêm mới kiểu đồ ăn
+</h1>
+<br />
 <table border="1">
     <tr>
         <th>Type Id</th>
@@ -29,9 +33,9 @@ $result = execute_query($query1);
         </tr>	
     <?php } ?>	
 </table>
-
-<a href="typefood_addnew">Thêm mới kiểu đồ ăn</a>
-
+<h5 style="text-align: center">
+    <a href="typefood_addnew"> Thêm mới kiểu đồ ăn </a>
+</h5>
 <?php
 require_once 'admin/inc_footer.php';
 ?>

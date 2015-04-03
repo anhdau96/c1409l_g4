@@ -18,6 +18,7 @@ function add_new() {
 }
 
 function do_login() {
+    $cart= post("cart");
     $email = post("email");
     $password = post("password");
     $query = "SELECT * FROM `Member` WHERE `MemEmail`='$email' AND `MemPassword`='$password'";
@@ -26,9 +27,13 @@ function do_login() {
     $result = execute_query($query);
 
     if ($row = mysqli_fetch_assoc($result)) {
+        $_SESSION["memid"] = $row["MemId"];
         $_SESSION["fullname"] = $row["MemFullname"];
-
+        if ($cart == 'yes'){
+            redirect("../receiver.php");
+        } else{
         redirect("../index.php");
+        }
     } else {
         redirect("../login.php?error=1");
     }

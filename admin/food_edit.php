@@ -12,6 +12,11 @@ if (mysqli_num_rows($result) > 0) {
     $choice = $row["TypeId"];
 }
 ?>
+
+<h1 style="text-align: center">
+    Cập nhập món ăn
+</h1>
+<br />
 <form action="process/food?do=update" method="post">
     <table>
         <tr>
@@ -60,7 +65,8 @@ if (mysqli_num_rows($result) > 0) {
         </tr>
                 
         <tr>
-            <th><input type="submit" value="Cập nhật" /></th>
+            <td></td>
+            <td><input type="submit" value="Cập nhật" /></td>
 
         </tr>
     </table>

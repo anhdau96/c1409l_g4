@@ -7,6 +7,10 @@ $query1 = "SELECT * FROM `Admin`";
 // mysql
 $result = execute_query($query1);
 ?>
+<h1 style="text-align: center">
+    Danh sách Admin
+</h1>
+<br />
 <table border="1">
     <tr>
         <th>Admin Id</th>
@@ -37,9 +41,9 @@ $result = execute_query($query1);
         </tr>	
     <?php } ?>	
 </table>
-
+<h5 style="text-align: center">
 <a href="admin_addnew">Thêm mới admin</a>
-
+</h5>
 <?php
 require_once 'admin/inc_footer.php';
 ?>

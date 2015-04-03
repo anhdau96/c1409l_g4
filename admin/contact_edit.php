@@ -9,6 +9,10 @@ if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
 }
 ?>
+<h1 style="text-align: center">
+    Cập nhập liên hệ
+</h1>
+<br />
 <form action="process/contact?do=update" method="post">
     <table>
         <tr>
@@ -55,7 +59,8 @@ if (mysqli_num_rows($result) > 0) {
         </tr>
         
         <tr>
-            <th><input type="submit" value="Cập nhật" /></th>
+            <td></td>
+            <td><input type="submit" value="Cập nhật" /></td>
 
         </tr>
     </table>

@@ -1,75 +1,123 @@
 <?php
-require_once 'include/config.php';
-require_once 'include/functions.php';
-require_once 'include/process.php';
+require 'inc_checklogin.php';
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-<title>ATDragons restaurant</title>
 <meta charset="UTF-8">
-<link href="admin/css/bootstrap.css" rel='stylesheet' type='text/css' />
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery-2.1.1.min.js"></script>
-<!-- Custom Theme files -->
-<link href="admin/css/style.css" rel="stylesheet" type="text/css" media="all" />
-<!-- Custom Theme files -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--Animation-->
-<script src="js/user js/wow.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<link href="admin/css/animate.css" rel='stylesheet' type='text/css' />
-<script>
-	new WOW().init();
+<title><?php echo $title_map[$path] ?></title>
+<link href= "<?php base_url("admin/css/bootstrap.min.css")?>" rel="stylesheet">
+<link href= "<?php base_url("admin/css/admin.css")?>" rel="stylesheet">
+<link rel= "stylesheet" href="<?php base_url("admin/fonts/font-awesome.min.css")?>">
+<script src= "<?php base_url("js/metisMenu.min.js")?>"></script>
+<script type="text/javascript" src= "<?php base_url("js/jquery-2.1.1.min.js")?>">
 </script>
-<script type="text/javascript" src="js/user js/move-top.js"></script>
-<script type="text/javascript" src="js/user js/easing.js"></script>
-<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('php,body').animate({scrollTop:$(this.hash).offset().top},1200);
-				});
-			});
-		</script>
+<script src="<?php base_url("js/bootstrap.min.js")?>"></script>
+<script src="<?php base_url("js/admin2.js")?>"></script>
+<script  type="text/javascript">
+	$(function(){
+		$("#menu-link").click(function(){
+			$("#menu-list").slideToggle();
+		});		
+	});
+	
+</script> 
 </head>
 <body>
-    <!-- header-section-starts -->
-	<div class="header">
-		<div class="container-fluid"  style="background-color: #262626">
-                    <div class="top-header">
-				<div class="logo">
-                                    <a href="home.php"><img src="imgs/logo.png" class="img-responsive" alt="" /></a>
-				</div>                                
-				<div class="queries">
-                                    <p><span> Call us: 1900-1280-6969 </span><label style="color: greenyellow">(8AM to 11PM)</label></p>
-				</div>
-                        <div><p style="color: red;font-family: Monotype Corsiva;font-size: 72px;text-align: center">ATDRAGON RESTAURANT</p></div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-			<div class="menu-bar">
-			<div class="container">
-				<div class="top-menu">
-					<ul>
-                                            <li><a href="index.php">Trang chủ</a></li>|
-						<li><a href="menu.php">Thực Đơn</a></li>|
-                                                <li><a href="about.php">Giới thiệu</a></li>|
-						<li><a href="contact.php">Liên Hệ</a></li>
-						<div class="clearfix"></div>
-					</ul>
-				</div>
-				<div class="login-section">
-					<ul>
-						<li><a href="login.php">Đăng nhập</a>  </li> |
-						<li><a href="register.php">Đăng kí</a> </li> |
-						<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Giỏ Hàng</a></li>
-						<div class="clearfix"></div>
-					</ul>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-    </div>	
-	<!-- header-section-ends -->
+    <div id="container">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="wrapper">           
+                <a class="navbar-brand" href="admin_home">ATDragons Admin</a>
+                <div id="head">
+                <h2 style="color: #686868">Xin chào, <?php echo ($_SESSION["username"]) ?></h2>
+            <a href="process/admin?do=logout" style="color: blue">Đăng xuất</a>
+                </div>
+            </div>                           
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">                     
+                        <li>
+                            <a href="admin_list"><i class="fa fa-user fa-fw"></i> Quản lý Admin <span class="fa arrow"></span></a> 
+        
+                            <ul class="nav nav-third-level">
+                                <li>
+                                    <a href="admin_list"> Danh Sách Admin</a>
+                                </li>
+                                <li>
+                                    <a href="admin_addnew">Thêm Mới Admin</a>
+                                </li>                            
+                            </ul>
+                        </li>
+                         <li>
+                              <a href="#"><i class="fa fa fa-list-alt fa fa-fw"></i>Đơn Hàng</a>
+                          </li> 
+                        <li>
+                            <a href="contact_list"><i class="fa fa-phone fa-fw"></i> Liên Hệ<span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level">
+                                <li>
+                                    <a href="contact_list">Danh Sách Liên Hệ</a>
+                                </li>
+                                <li>
+                                    <a href="contact_addnew">Thêm Mới Liên Hệ</a>
+                                </li>
+                            </ul>                        
+                        </li> 
+                        
+                        <li>
+                            <a href="food_list"><i class="fa fa-sitemap fa-fw"></i>Thực Đơn<span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level">
+                                <li>
+                                    <a href="food_list">Danh Sách Món Ăn</a>
+                                </li>
+                                <li>
+                                    <a href="food_addnew">Thêm Mới Món Ăn</a>
+                                </li>
+                                <li>
+                                    <a href="food_search">Tìm Kiếm Món Ăn</a>
+                                </li>                             
+                            </ul>
+                        </li>
+  
+                         <li>
+                            <a href="restaurant_list"><i class="fa fa-home fa-fw"></i>Thông Tin Nhà Hàng<span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level">
+                                <li>
+                                    <a href="restaurant_list">Danh Sách Nhà Hàng</a>
+                                </li>
+                                <li>
+                                    <a href="restaurant_addnew">Thêm Mới Nhà Hàng</a>
+                                </li>                                                     
+                            </ul>
+                        </li>
+ 
+                         <li>
+                            <a href="typefood_list"><i class="fa fa-list fa-fw"></i>Kiểu đồ ăn<span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level">
+                                <li>
+                                    <a href="typefood_list">Danh sách kiểu đồ ăn</a>
+                                </li>
+                                <li>
+                                    <a href="typefood_addnew">Thêm mới kiểu đồ ăn</a>
+                                </li>                                                         
+                            </ul>
+                        </li>
+                      
+                         <li>
+                            <a href="typepay_list"><i class="fa fa-money fa-fw"></i>Kiểu Thanh Toán<span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level">
+                                <li>
+                                    <a href="typepay_list">Danh Sách Kiểu Thanh Toán</a>
+                                </li>
+                                <li>
+                                    <a href="typepay_addnew">Thêm Mới Kiểu Thanh Toán</a>
+                                </li>                                                           
+                            </ul>
+                        </li>
+                          <li>
+                              <a href="feedback_list"><i class="fa fa-users fa-fw"></i>Phản Hồi Khách Hàng</a>
+                          </li> 
+                    </ul>
+                </div>             
+            </div>           
+        </nav>
+        <div id="page-wrapper"> 

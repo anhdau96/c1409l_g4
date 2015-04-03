@@ -7,6 +7,10 @@ $query1 = "SELECT * FROM `FeedBack`";
 // mysql
 $result = execute_query($query1);
 ?>
+<h1 style="text-align: center">
+    Phản hồi khách hàng
+</h1>
+<br />
 <table border="1">
     <tr>
         <th>FeedBack Id</th>

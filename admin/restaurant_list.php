@@ -7,6 +7,10 @@ $query1 = "SELECT * FROM `Restaurant`";
 // mysql
 $result = execute_query($query1);
 ?>
+<h1 style="text-align: center">
+    Danh sách nhà hàng
+</h1>
+<br />
 <table border="1">
     <tr>
         <th>Restaurant Id</th>
@@ -33,9 +37,9 @@ $result = execute_query($query1);
         </tr>	
     <?php } ?>	
 </table>
-
-<a href="restaurant_addnew.php">Thêm mới cửa hàng</a>
-
+<h5 style="text-align: center">
+<a href="restaurant_addnew">Thêm mới nhà hàng</a>
+</h5>
 <?php
 require_once 'admin/inc_footer.php';
 ?>
