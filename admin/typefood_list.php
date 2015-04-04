@@ -1,15 +1,24 @@
 <?php
 require_once 'admin/inc_header.php';
 
-// tao ra query, phai chay trong navicat truoc
-$query1 = "SELECT * FROM `TypeFood`";
+$n = get("page");
+$n = ($n=="" ?  1  :  $n);
 
-// mysql
-$result = execute_query($query1);
+$rs_count = execute_query("SELECT COUNT(*) as cnt FROM `TypeFood`");
+$count_row = mysqli_fetch_assoc($rs_count);
+$total = $count_row["cnt"];
+
+$rs = execute_query("SELECT * FROM `TypeFood`" . createLimitForPaging($n));
+$total_page = ceil($total / PAGE_ROW);
 ?>
-<h1 style="text-align: center">
-    Thêm mới kiểu đồ ăn
-</h1>
+
+<h1>Order List <?php echo $n . "/" . $total_page ?> </h1>
+
+<?php
+for ($i=1;$i<=$total_page; $i++) {
+  echo "<a href='?page=$i'>$i</a> | ";   
+}
+?>
 <br />
 <table border="1">
     <tr>
@@ -21,7 +30,7 @@ $result = execute_query($query1);
     </tr>
 
     <?php
-    while (($row = mysqli_fetch_assoc($result))) {
+    while (($row = mysqli_fetch_assoc($rs))) {
         ?>
         <tr>
             <td><?php echo $row["TypeId"] ?></td>

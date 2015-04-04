@@ -51,6 +51,75 @@ require_once 'inc_header.php';
     </div>
     </div>
     <br />
+    <div class="contact-section" id="contact">
+			<div class="container">
+				<div class="contact-section-grids">
+					<div class="col-md-3 contact-section-grid wow fadeInLeft" data-wow-delay="0.4s">
+						<h4>Trụ sở chính</h4>
+						<ul>
+							<li><i class="point"></i></li>
+                                                        <li class="data"><a href="about.php">Giới thiệu</a></li>
+						</ul>
+						<ul>
+							<li><i class="point"></i></li>
+                                                        <li class="data"><a href="contact.php">Liên hệ</a></li>
+						</ul>
+						<ul>
+							<li><i class="point"></i></li>
+                                                        <li class="data"><a href="privacy.php">Chính sách bảo mật</a></li>
+						</ul>
+						<ul>
+							<li><i class="point"></i></li>
+                                                        <li class="data"><a href="term.php">Điều khoản</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3 contact-section-grid wow fadeInLeft" data-wow-delay="0.4s">
+						<h4>Chi nhánh</h4>
+						<ul>
+							<li><i class="point"></i></li>
+                                                        <li class="data"><a href="about.php">Giới thiệu</a></li>
+						</ul>
+						<ul>
+							<li><i class="point"></i></li>
+                                                        <li class="data"><a href="contact.php">Liên hệ</a></li>
+						</ul>
+						<ul>
+							<li><i class="point"></i></li>
+                                                        <li class="data"><a href="privacy.php">Chính sách bảo mật</a></li>
+						</ul>
+						<ul>
+							<li><i class="point"></i></li>
+                                                        <li class="data"><a href="term.php">Điều khoản</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3 contact-section-grid wow fadeInRight" data-wow-delay="0.4s">
+						<h4>Theo dõi trên...</h4>
+						<ul>
+							<li><i class="fb"></i></li>
+                                                        <li class="data"> <a href="https://www.facebook.com/"><img src="imgs/facebook.png"/>Facebook</a></li>
+						</ul>
+						<ul>
+							<li><i class="tw"></i></li>
+                                                        <li class="data"> <a href="https://www.twitter.com/"><img src="imgs/twitter.png"/>Twitter</a></li>
+						</ul>
+						<ul>
+							<li><i class="in"></i></li>
+                                                        <li class="data"><a href="https://Zing.vn"><img src="imgs/zing.png"/>Zing</a></li>
+						</ul>
+						<ul>
+							<li><i class="gp"></i></li>
+                                                        <li class="data"><a href="https://plus.google.com"><img src="imgs/google-plus.png"/>Google Plus</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3 contact-section-grid nth-grid wow fadeInRight" data-wow-delay="0.4s">
+						<h4>Bạn đã có tài khoản?</h4>
+						<p>Vậy còn chờ gì nữa hãy đăng nhập và đặt món của chúng tôi ngay hôm nay</p>
+                                                <a href="login.php" class="btn btn-info" role="button">Đăng nhập</a>
+						</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
     <!--end form-->
     
 <?php

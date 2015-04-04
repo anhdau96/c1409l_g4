@@ -56,7 +56,8 @@ require_once 'include/process.php';
                                             <li><a href="index.php">Trang chủ</a></li>|
 						<li><a href="menu.php">Thực Đơn</a></li>|
                                                 <li><a href="about.php">Giới thiệu</a></li>|
-						<li><a href="contact.php">Liên Hệ</a></li>
+						<li><a href="contact.php">Liên Hệ</a></li>|
+                                                <li><a href="search.php">Tìm kiếm</a></li>
 						<div class="clearfix"></div>
 					</ul>
 				</div>

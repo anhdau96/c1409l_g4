@@ -19,81 +19,72 @@ if (isset($_SESSION["fullname"])) {
                 }
     $result = execute_query("SELECT * FROM TypePay");
     ?>
-    <form action="order.php?do=add_new" method="post">
-        <table>
-            <tr>
-                <th>
-                    Mã số khách hàng
-                </th>
-                <td>
-                    <input type="text" name="memid" value="<?php echo($_SESSION["memid"])?>" readonly/>
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    Phương thức thanh toán
-                </th>
-                <td>
-                    <select name="typeid">
-                        <?php while (($row = mysqli_fetch_assoc($result))) {
-                        ?>                    
-                        <option value="<?php echo $row["TypePayId"] ?>"><?php echo $row["TypePayName"] ?></option>
-                        <?php
-                        }
-                        ?>
-                    </select>                   
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    Tên người nhận
-                </th>
-                <td>
-                    <input type="text" name="name" />
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    Số điện thoại người nhận
-                </th>
-                <td>
-                    <input type="text" name="phone" />
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    Địa chỉ giao hàng
-                </th>   
-                <td>
-                    <input type="text" name="add" />
-                </td> 
-            </tr>
-            <tr>
-                <th>
-                    Ngày đặt đơn hàng
-                </td>
-                <th>
-                    <?php
-                    echo '<input type="text" name="date" value="'.gmdate("Y/m/d ", time() + 3600*($timezone+date("I"))).'" readonly />';
-                    ?>
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    Tổng hóa đơn
-                </th>   
-                <td>
-                    <input type="text" name="price" value="<?php echo($totalprice)?>" readonly />
-                </td> 
-            </tr>
-            <tr>
-                <th colspan="2">
-                    <input type="submit" value="Gửi đặt hàng" />
-                </th>
-            </tr>
-        </table>
-    </form>
-
+<div class="container">
+    <div class="jumbotron">
+        <form class="form-horizontal" action="order.php?do=add_new" method="post">
+                   <div class="form-group">
+                       <label class="control-label col-sm-3" style="font-family: Amazone; font-size: 20px;color: purple">Mã số khách hàng:</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" name="memid" value="<?php echo($_SESSION["memid"])?>" readonly/>
+                        </div>
+                   </div>
+                   <div class="form-group">
+                       <label class="control-label col-sm-3" style="font-family: Amazone ;font-size: 20px;color: purple">Phương thức thanh toán:</label>
+                        <div class="col-sm-5">
+                            <select class="form-control" name="typeid">
+                                <?php while (($row = mysqli_fetch_assoc($result))) {
+                                ?>                    
+                                <option value="<?php echo $row["TypePayId"] ?>"><?php echo $row["TypePayName"] ?></option>
+                                <?php
+                                }
+                                ?>
+                            </select> 
+                        </div>
+                   </div>
+                   <div class="form-group">
+                       <label class="control-label col-sm-3" style="font-family: Amazone ;font-size: 20px;color: purple">Tên người nhận:</label>
+                        <div class="col-sm-5">
+                            <input class="form-control" type="text" name="name" />
+                        </div>
+                   </div>
+                   <div class="form-group">
+                       <label class="control-label col-sm-3" style="font-family: Amazone ;font-size: 20px;color: purple">Số điện thoại người nhận:</label>
+                        <div class="col-sm-5">
+                            <input class="form-control" type="text" name="phone" />
+                        </div>
+                   </div>
+                   <div class="form-group">
+                       <label class="control-label col-sm-3" style="font-family: Amazone ;font-size: 20px;color: purple">Địa chỉ giao hàng:</label>
+                        <div class="col-sm-5">
+                            <input class="form-control" type="text" name="add" />
+                        </div>
+                   </div>
+                   <div class="form-group">
+                       <label class="control-label col-sm-3" style="font-family: Amazone ;font-size: 20px;color: purple">Ngày đặt đơn hàng:</label>
+                        <div class="col-sm-5">
+                            <?php
+                            echo '<input class="form-control" type="text" name="date" value="'.gmdate("Y/m/d ", time() + 3600*($timezone+date("I"))).'" readonly />';
+                            ?>
+                        </div>
+                   </div>
+                   <div class="form-group">
+                       <label class="control-label col-sm-3" style="font-family: Amazone ;font-size: 20px;color: purple">Tổng hóa đơn:</label>
+                        <div class="col-sm-5">
+                            <input class="form-control" type="text" name="price" value="<?php echo($totalprice)?>" readonly />
+                        </div>
+                   </div>
+                   <div class="form-group">
+                       <label class="control-label col-sm-3" style="font-family: Amazone ;font-size: 20px;color: purple">Gửi đơn hàng:</label>
+                        <div class="col-sm-5">
+                            <input class="btn-success" type="submit" value="Gửi đặt hàng" style="font-size: 20px"/>
+                        </div>
+                   </div>
+        </form>
+    </div>        
+</div>
+    
+        
+     
     <?php
 } else {
     redirect("login.php");

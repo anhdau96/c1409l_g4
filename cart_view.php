@@ -25,27 +25,27 @@ if (isset($_SESSION["cart"])) {
         ?>
     <div class="container">
             <div class="jumbotron">
-        <h2>Số lương món ăn trong giỏ hàng: 
+        <h2 style="font-family: Amazone; font-size: 37px; color: green">Số lượng món ăn trong giỏ hàng: 
             <?php
             echo $i;
         ?>
         </h2>
         <form action="receiver.php" method="post">
         <div class="row" style="color: blueviolet">
-            <div class="col-md-2">
-                <p>Tên món ăn</p>
+            <div class="col-md-3">
+                <p style="font-family: Amazone ;font-size: 30px">Tên món ăn</p>
+            </div>
+            <div class="col-md-3"> 
+                <p style="font-family: Amazone ;font-size: 30px">Giá bán</p>
             </div>
             <div class="col-md-2"> 
-                <p>Giá bán</p>
-            </div>
-            <div class="col-md-4"> 
-                <p>Số lượng</p>
+                <p style="font-family: Amazone ;font-size: 30px">Số lượng</p>
             </div>
             <div class="col-md-2"> 
-                <p>Số Tiền</p>
+                <p style="font-family: Amazone ;font-size: 30px">Số Tiền</p>
             </div>
             <div class="col-md-2"> 
-                <p>Bỏ món ăn</p>
+                <p style="font-family: Amazone ;font-size: 30px">Bỏ món ăn</p>
             </div>
         </div>
         <hr />
@@ -56,20 +56,20 @@ if (isset($_SESSION["cart"])) {
                 while ($row = mysqli_fetch_assoc($rs)) {
                     ?>
                     <div class="row" style="color: palevioletred">
-                        <div class="col-md-2">
-                            <p><?php echo $row["FoodName"] ?></p>
-                        </div>
-                        <div class="col-md-2"> 
-                            <p><?php echo $row["FoodPrice"]?> VNĐ</p>
+                        <div class="col-md-3">
+                            <p style="font-family: Amazone ;font-size: 30px"><?php echo $row["FoodName"] ?></p>
                         </div>
                         <div class="col-md-3"> 
-                            <p><?php echo $_SESSION["cart"][$row["FoodId"]] ?></p>
+                            <p style="font-family: Amazone ;font-size: 30px"><?php echo $row["FoodPrice"]?> Vnđ</p>
                         </div>
                         <div class="col-md-2"> 
-                            <p><?php echo $_SESSION["cart"][$row["FoodId"]] * $row["FoodPrice"] ?></p>
+                            <p style="text-align: center; font-family: Amazone ;font-size: 30px" "><?php echo $_SESSION["cart"][$row["FoodId"]] ?></p>
+                        </div>
+                        <div class="col-md-2"> 
+                            <p style="font-family: Amazone ;font-size: 30px"><?php echo $_SESSION["cart"][$row["FoodId"]] * $row["FoodPrice"] ?></p>
                         </div>   
                         <div class="col-md-2"> 
-                            <p><a href="user/cart.php?do=delete&foodid=<?php echo $row["FoodId"] ?>">X</a></p>
+                            <p><a href="user/cart.php?do=delete&foodid=<?php echo $row["FoodId"] ?>" class="btn btn-info" style="font-size: 20px">X</a></p>
                         </div>
                     </div>
                     <hr />
@@ -87,15 +87,15 @@ if (isset($_SESSION["cart"])) {
                         <div class="col-md-3"> 
                         </div>
                         <div class="col-md-2">
-                            <p>Thành tiền</p>
+                            <p style="font-family: Amazone ;font-size: 30px">Thành tiền:</p>
                         </div>   
                         <div class="col-md-2"> 
-                            <p><?php echo $totalprice ?></p>
+                            <p style="font-family: Amazone ;font-size: 30px"><?php echo $totalprice ?>Vnđ</p>
                         </div>
                 </div>
                 <hr />
                 
-                <h3 style="text-align: center"><input type="submit" value="Đặt hàng" /></h3>
+                <h3 style="text-align: center"><input type="submit" value="Đặt hàng" class="btn btn-info" style="font-size: 20px"/></h3>
 
     </form>
     </div>

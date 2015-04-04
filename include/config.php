@@ -48,3 +48,6 @@ $title_map["/admin/food_search"] ="Tìm kiếm đồ ăn";
 $title_map["/admin/feedback_list"] ="Danh sách đồ ăn";
 
 $title_map["/admin/admin_home"] ="Trang chủ";
+
+$title_map["/admin/order_list"] ="Danh sách đơn hàng";
+$title_map["/admin/order_edit"] ="Chỉnh sửa đơn hàng";

@@ -5,11 +5,11 @@ require_once 'admin/inc_header.php';
 $n = get("page");
 $n = ($n=="" ?  1  :  $n);
 
-$rs_count = execute_query("SELECT COUNT(*) as cnt FROM Oder");
+$rs_count = execute_query("SELECT COUNT(*) as cnt FROM `Order`");
 $count_row = mysqli_fetch_assoc($rs_count);
 $total = $count_row["cnt"];
 
-$rs = execute_query("SELECT * FROM Order" . createLimitForPaging($n));
+$rs = execute_query("SELECT * FROM `Order`" . createLimitForPaging($n));
 $total_page = ceil($total / PAGE_ROW);
 ?>
 
@@ -32,6 +32,7 @@ for ($i=1;$i<=$total_page; $i++) {
         <th>Receiver Phone</th>
         <th>Receiver Address</th>
         <th>Note</th>
+        <th>Chi tiết</th>
         <th>Cập nhập</th>
         <th>Xóa</th>
     </tr>
@@ -42,20 +43,20 @@ for ($i=1;$i<=$total_page; $i++) {
         <tr>
             <td><?php echo $row["OrderStatus"] ?></td>
             <td><?php echo $row["MemId"] ?></td>
+            <td><?php echo $row["TypePayId"] ?></td>
             <td><?php echo $row["TotalCost"] ?></td>
             <td><?php echo $row["ReceiverDate"] ?></td>            
             <td><?php echo $row["ReceiverName"] ?></td>
             <td><?php echo $row["ReceiverPhone"] ?></td>
             <td><?php echo $row["ReceiverAddress"] ?></td>
             <td><?php echo $row["Note"] ?></td>
-            <td><a href="order_edit?orderid=<?php echo $row["FoodId"] ?>">Cập
+            <td><a href="">Chi tiết</a></td>
+            <td><a href="order_edit?orderid=<?php echo $row["OrderId"] ?>">Cập
             nhật</a></td>
-            <td><a href="process/order?do=delete&orderid=<?php echo $row["OrdedrId"] ?>">X</a> </td>
+            <td><a href="../order?do=delete&orderid=<?php echo $row["OrderId"] ?>">X</a> </td>
         </tr>	
     <?php } ?>	
 </table>
-
-<h2><a href="food_addnew.php">Thêm mới đồ ăn</a></h2>
 
 <?php
 require_once 'admin/inc_footer.php';

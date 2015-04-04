@@ -4,15 +4,19 @@ require_once 'include/functions.php';
 require_once 'include/process.php';
 
 function update() {
-    $orderid = get("orderid");
-    $date = post("date");
-    $value = post("value");
-    $cus_username = post("cus_username");
-    $cou_username = post("cou_username");
+    $orderid  = post("orderid");
+    $date  = post("date");
+    $typeid = post("typeid");
+    $name = post("name");
+    $phone = post("phone");
+    $add = post("add");
+    $memid = post("memid");    
+    $totalprice = post ("totalcost");
+    $status = post ("status");
    
-    $query = "UPDATE `order` SET `date`='$date',`value`='$value', `cus_username`='$cus_username',`cou_username`='$cou_username' WHERE `orderid`='$orderid'";
+    $query = "UPDATE `Order` SET `OrderId`='$orderid',`OrderStatus`='$status', `MemId`='$memid',`TotalCost`='$totalprice',`ReceiverDate`='$date',`ReceiverName`='$name',`ReceiverPhone`='$phone',`ReceiverAddress`='$add',`Note`='$note' WHERE `orderid`='$orderid'";
     $result = execute_query($query);
-    redirect("../order_list");
+    redirect("index.php/admin/order_list");
 }
 
 function add_new() {
@@ -32,13 +36,46 @@ function add_new() {
 
     execute_query($query);
     
+    $cart = $_SESSION["cart"];
+    $i = 0;
+    
+    $query = "SELECT * FROM Food WHERE FoodId IN (";
+    $comma = "";
+    foreach ($_SESSION["cart"] as $key => $value) {
+        $query .= $comma . $key;
+        $comma = ",";
+        
+        $foodid[$i] = $key;
+        $quantity[$i] = $value;
+        $i++;
+    }
+    $query .= ")";
+    $result = execute_query($query);
+    $a = 0;
+    while ($row = mysqli_fetch_assoc($result)) {
+        $price[$a] = $row['FoodPrice'];
+        $a++;
+    }
+    
+    $productquantity = count($cart);    
+    
+    $orderid_query = "SELECT * FROM `Order` WHERE `Orderid` = (SELECT MAX(OrderId) FROM `Order`)";
+    $orderid_result = execute_query($orderid_query);
+    $orderid_row = mysqli_fetch_assoc($orderid_result);
+    $orderid = $orderid_row['OrderId'];
+    
+    for ($b = 0; $b < $productquantity; $b++){
+        $order_details_query = "INSERT INTO `OrderDetail` VALUES ( '$orderid', '$foodid[$b]', '$price[$b]', '$quantity[$b]')";
+        execute_query($order_details_query);
+}
+
     unset($_SESSION["cart"]);
     redirect("index.php");
 }
 
 function delete() {
     $orderid = get("orderid");
-    $query = "DELETE FROM `order` WHERE `orderid`='$orderid'";
+    $query = "DELETE FROM `Order` WHERE `Orderid`='$orderid'";
     $result = execute_query($query);
-    redirect("../order_list.php");
+    redirect("admin/order_list");
 }

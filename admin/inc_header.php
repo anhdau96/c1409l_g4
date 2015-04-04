@@ -49,7 +49,7 @@ require 'inc_checklogin.php';
                             </ul>
                         </li>
                          <li>
-                              <a href="#"><i class="fa fa fa-list-alt fa fa-fw"></i>Đơn Hàng</a>
+                                <a href="order_list"><i class="fa fa fa-list-alt fa fa-fw"></i>Đơn Hàng</a>
                           </li> 
                         <li>
                             <a href="contact_list"><i class="fa fa-phone fa-fw"></i> Liên Hệ<span class="fa arrow"></span></a>

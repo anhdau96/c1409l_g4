@@ -30,7 +30,7 @@ $result = execute_query($query1);
             <td><?php echo $row["FeedTitle"] ?></td>
             <td><?php echo $row["FeedEmail"] ?></td>
             <td><?php echo $row["FeedContent"] ?></td>
-            <td><a href="process/feedback?action=delete?feedid=<?php echo $row["FeedId"] ?>">X</a> </td>
+            <td><a href="process/feedback?do=delete?feedid=<?php echo $row["FeedId"] ?>">X</a> </td>
         </tr>	
     <?php } ?>	
 </table>

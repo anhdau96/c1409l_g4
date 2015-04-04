@@ -13,16 +13,13 @@ $rs = execute_query("SELECT * FROM Food F JOIN TypeFood TF ON F.TypeId=TF.TypeId
 $total_page = ceil($total / PAGE_ROW);
 ?>
 
-<h1>Food List <?php echo $n . "/" . $total_page ?> </h1>
+<h1>Danh sách món ăn <?php echo $n . "/" . $total_page ?> </h1>
 
 <?php
 for ($i=1;$i<=$total_page; $i++) {
   echo "<a href='?page=$i'>$i</a> | ";   
 }
 ?>
-<h1 style="text-align: center">
-    Danh sách món ăn
-</h1>
 <br />
 <table border="1">
     <tr>

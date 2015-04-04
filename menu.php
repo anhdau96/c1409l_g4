@@ -31,12 +31,12 @@ $total_page = ceil($total / PAGE_ROW);
         <div class="container">
             <div class="jumbotron">
                 <h1 style="font-family: Monotype Corsiva;color: red">MENU</h1>      
-                <p style="color: green">Thực đơn có thể được thay đổi mỗi ngày</p>
+                <p style="color: green; font-family: Amazone ;font-size: 30px"">Thực đơn có thể được thay đổi mỗi ngày</p>
                 
     <ul class="nav nav-tabs">
-    <li class="<?php if ($choose=='appetizer' || $choose == '') echo "active" ?>"><a href="menu.php?page=1&choose=appetizer">Khai vị</a></li>
-    <li class="<?php if ($choose== 'main') echo "active" ?>"><a href="menu.php?page=1&choose=main">Món chính</a></li>
-    <li class="<?php if ($choose== 'drink') echo "active" ?>"><a href="menu.php?page=1&choose=drink">Đồ uống</a></li>
+        <li class="<?php if ($choose=='appetizer' || $choose == '') echo "active" ?>"><a href="menu.php?page=1&choose=appetizer" style="font-family: Amazone ;font-size: 30px">Khai vị</a></li>
+        <li class="<?php if ($choose== 'main') echo "active" ?>"><a href="menu.php?page=1&choose=main" style="font-family: Amazone ;font-size: 30px">Món chính</a></li>
+        <li class="<?php if ($choose== 'drink') echo "active" ?>"><a href="menu.php?page=1&choose=drink" style="font-family: Amazone ;font-size: 30px">Đồ uống</a></li>
   </ul>
     <?php
 for ($i=1;$i<=$total_page; $i++) {
@@ -45,19 +45,19 @@ for ($i=1;$i<=$total_page; $i++) {
 ?>
     <div class="row" style="color: blueviolet">
     <div class="col-md-2">
-      <p>Loại món ăn</p>
+      <p style="font-family: Amazone ;font-size: 25px">Loại món ăn</p>
     </div>
     <div class="col-md-2"> 
-      <p>Tên món ăn</p>
+      <p style="font-family: Amazone ;font-size: 25px">Tên món ăn</p>
     </div>
     <div class="col-md-4"> 
-      <p>Mô tả</p>
+      <p style="font-family: Amazone ;font-size: 25px">Mô tả</p>
     </div>
     <div class="col-md-2"> 
-        <p>Giá bán</p>
+        <p style="font-family: Amazone ;font-size: 25px">Giá bán</p>
     </div>
      <div class="col-md-2"> 
-      <p>Giỏ hàng</p>
+      <p style="font-family: Amazone ;font-size: 25px">Giỏ hàng</p>
     </div>
   </div>
   <hr />
@@ -66,16 +66,16 @@ for ($i=1;$i<=$total_page; $i++) {
 ?>
   <div class="row" style="color: palevioletred">
     <div class="col-md-2">
-      <p style="font-family: Tahoma"><?php echo $row["TypeName"]?></p>
+      <p style="font-family: Amazone;font-size: 27px"><?php echo $row["TypeName"]?></p>
     </div>
     <div class="col-md-2"> 
-      <p style="font-family: Tahoma"><?php echo $row["FoodName"]?></p>
+      <p style="font-family: Amazone;font-size: 27px"><?php echo $row["FoodName"]?></p>
     </div>
     <div class="col-md-3"> 
-      <p style="font-family: Tahoma"><?php echo $row["FoodDescription"]?></p>
+      <p style="font-family: Amazone;font-size: 27px"><?php echo $row["FoodDescription"]?></p>
     </div>
     <div class="col-md-2"> 
-      <p style="font-family: Tahoma"><?php echo $row["FoodPrice"]?> VNĐ</p>
+      <p style="font-family: Amazone;font-size: 27px"><?php echo $row["FoodPrice"]?> VNĐ</p>
     </div>
     <div class="col-md-3"> 
       <p><a href="user/cart.php?do=add&choose=<?php echo $choose?>&page=<?php echo $n?>&foodid=<?php echo $row["FoodId"]?>" class="btn btn-info btn-lg">
@@ -150,10 +150,9 @@ for ($i=1;$i<=$total_page; $i++) {
 						</ul>
 					</div>
 					<div class="col-md-3 contact-section-grid nth-grid wow fadeInRight" data-wow-delay="0.4s">
-						<h4>Đăng ký nhận tin</h4>
+						<h4>Đăng ký tài khoản ngay</h4>
 						<p>Để nhận thông báo và khuyến mãi mới nhất từ chúng tôi</p>
-						<input type="text" class="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
-						<input type="submit" value="submit">
+						<a href="register.php" class="btn btn-info" role="button">Đăng kí</a>
 						</div>
 					<div class="clearfix"></div>
 				</div>

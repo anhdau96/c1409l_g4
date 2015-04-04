@@ -151,10 +151,9 @@ Ban quản lý ATDragonrestaurant.com.vn yêu cầu các cá nhân khi đăng k�
 						</ul>
 					</div>
 					<div class="col-md-3 contact-section-grid nth-grid wow fadeInRight" data-wow-delay="0.4s">
-						<h4>Đăng ký nhận tin</h4>
+						<h4>Đăng ký tài khoản ngay</h4>
 						<p>Để nhận thông báo và khuyến mãi mới nhất từ chúng tôi</p>
-						<input type="text" class="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
-						<input type="submit" value="submit">
+						<a href="register.php" class="btn btn-info" role="button">Đăng kí</a>
 						</div>
 					<div class="clearfix"></div>
 				</div>

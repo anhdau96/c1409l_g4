@@ -12,13 +12,13 @@ require_once 'inc_header.php';
 			 		<div class="container">
 			 			<div class="col-md-6 contact_left wow fadeInRight" data-wow-delay="0.4s">
 			 				<h4>Đơn Liên hệ</h4>
-			 				<p>ABCXYZ</p>
-							  <form>
+			 				<p>ATDragon Restaurant</p>
+                                                        <form action="feedback.php?do=add_new" method="post">
 								 <div class="form_details">
-					                 <input type="text" class="text" value="Tên" onfocus="this.value = '';" onblur="if (this.value === '') {this.value = 'Name';}">
-									 <input type="text" class="text" value="Địa chỉ email" onfocus="this.value = '';" onblur="if (this.value === '') {this.value = 'Email Address';}">
-									 <input type="text" class="text" value="Chủ đề" onfocus="this.value = '';" onblur="if (this.value === '') {this.value = 'Chủ Đề';}">
-									 <textarea value="Nội dung" onfocus="this.value = '';" onblur="if (this.value === '') {this.value = 'Nội dung';}">Nội dung</textarea>
+                                                                        <input type="text" class="text" name="feedname" value="Tên"  onfocus="this.value = '';" onblur="if (this.value === '') {this.value = 'Name';}">
+									 <input type="text" class="text" name="feedemail" value="Địa chỉ email" onfocus="this.value = '';" onblur="if (this.value === '') {this.value = 'Email Address';}">
+									 <input type="text" class="text" name="feedtitle" value="Chủ đề" onfocus="this.value = '';" onblur="if (this.value === '') {this.value = 'Chủ Đề';}">
+                                                                         <textarea value="Nội dung" name="feedcontent" onfocus="this.value = '';" onblur="if (this.value === '') {this.value = 'Nội dung';}">Nội dung</textarea>
 									 <div class="clearfix"> </div>
 									 <div class="sub-button wow swing animated" data-wow-delay= "0.4s">
 									 	<input name="submit" type="submit" value="Gửi Tin nhắn">
@@ -34,7 +34,7 @@ require_once 'inc_header.php';
 	  <div class="company-right">
 					        	<div class="company_ad">
 							     		<h3>Thông tin liên hệ</h3>
-							     		<span>ABCXYZ</span>
+							     		<span>Phòng tư vấn</span>
 			      						<address>
 											 <p>email:<a href="mail-to: llzlokizll@gmail.com">llzlokizll@gmail.com</a></p>
 											 <p>phone:  +03625593626</p>
