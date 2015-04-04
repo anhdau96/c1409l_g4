@@ -71,25 +71,24 @@ if ($name != "") {
                 <p style="font-family: Amazone ;font-size: 25px">Giá bán</p>
             </div>
         </div>
-        <hr />
         <?php 
             while ($row = mysqli_fetch_assoc($result)){
         ?>
             <div class="row" style="color: palevioletred">
-                <div class="col-md-2">
-                    <p style="font-family: Amazone;font-size: 27px"><?php echo $row["TypeName"]?></p>
-                </div>
-                <div class="col-md-2"> 
-                    <p style="font-family: Amazone;font-size: 27px"><?php echo $row["FoodName"]?></p>
-                </div>
-                <div class="col-md-3"> 
-                    <p style="font-family: Amazone;font-size: 27px"><?php echo $row["FoodDescription"]?></p>
-                </div>
-                <div class="col-md-2"> 
-                    <p style="font-family: Amazone;font-size: 27px"><?php echo $row["FoodPrice"]?> VNĐ</p>
-                </div>
+            <div class="col-md-2">
+                <p style="font-family: Amazone;font-size: 27px"><?php echo $row["TypeName"]?></p>
             </div>
-            <hr />
+            <div class="col-md-2"> 
+                <p style="font-family: Amazone;font-size: 27px"><?php echo $row["FoodName"]?></p>
+            </div>
+            <div class="col-md-3"> 
+                <p style="font-family: Amazone;font-size: 27px"><?php echo $row["FoodDescription"]?></p>
+            </div>
+            <div class="col-md-2"> 
+                <p style="font-family: Amazone;font-size: 27px"><?php echo $row["FoodPrice"]?> VNĐ</p>
+            </div>
+  </div>
+  <hr />
 <?php
     }
 ?>
