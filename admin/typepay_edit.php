@@ -1,9 +1,9 @@
 <?php
 require_once 'admin/inc_header.php';
 
-$typepayid = get("typeid");
+$typeid = get("typeid");
 
-$result = execute_query("SELECT * FROM `Type` WHERE `TypeId` =$typeid");
+$result = execute_query("SELECT * FROM `TypePay` WHERE `TypePayId` =$typeid");
 
 if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
@@ -18,7 +18,7 @@ Cập nhập kiểu thanh toán
         <tr>
             <th>TypePay Id</th>
             <td><input type="text" name="typepayid" id="typepayid" readonly
-                       value="<?php echo get("typepayid") ?>" /></td>
+                       value="<?php echo get("typeid") ?>" /></td>
         </tr>
 
         <tr>
@@ -33,6 +33,7 @@ Cập nhập kiểu thanh toán
         </tr>
     </table>
 </form>
+
 <?php
-require_once 'admin/inc_footer';
+require_once 'admin/inc_footer.php';
 ?>

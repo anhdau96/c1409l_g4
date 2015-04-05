@@ -28,7 +28,7 @@ if (mysqli_num_rows($result) > 0) {
         <tr>
             <th>Food Name</th>
             <td><input type="text" name="foodname" id="foodname"
-                       value="<?php echo $row["FoodName"] ?>" /></td>
+                       value="<?php echo $row["FoodName"] ?>" required/></td>
         </tr>
 
         <tr>
@@ -61,7 +61,7 @@ if (mysqli_num_rows($result) > 0) {
         <tr>
             <th>Food Price</th>
             <td><input type="text" name="foodprice" id="foodprice"
-                       value="<?php echo $row["FoodPrice"] ?>" /></td>
+                       value="<?php echo $row["FoodPrice"] ?>" required/></td>
         </tr>
                 
         <tr>

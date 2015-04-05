@@ -10,7 +10,7 @@ require_once 'admin/inc_header.php';
     <table>
         <tr>
             <th>Type Name</th>
-            <td><input type="text" name="typename" id="typename" /></td>
+            <td><input type="text" name="typename" id="typename" required/></td>
         </tr>
         
         <tr>

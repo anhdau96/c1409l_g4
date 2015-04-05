@@ -24,7 +24,7 @@ if (mysqli_num_rows($result) > 0) {
         <tr>
             <th>Type Name</th>
             <td><input type="text" name="typename" id="typename"
-                       value="<?php echo $row["TypeName"] ?>" /></td>
+                       value="<?php echo $row["TypeName"] ?>" required/></td>
         
         <tr>
             

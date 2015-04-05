@@ -12,7 +12,7 @@ $result = execute_query("SELECT * FROM TypeFood");
     <table>
         <tr>
             <th>Food Name</th>
-            <td><input type="text" name="foodname" id="foodname" /></td>
+            <td><input type="text" name="foodname" id="foodname" required/></td>
         </tr>
 
         <tr>
@@ -42,7 +42,7 @@ $result = execute_query("SELECT * FROM TypeFood");
         
         <tr>
             <th>Food Price</th>
-            <td><input type="number" name="foodprice" id="foodprice" /></td>
+            <td><input type="number" name="foodprice" id="foodprice" required/></td>
         </tr>
 
         <tr>

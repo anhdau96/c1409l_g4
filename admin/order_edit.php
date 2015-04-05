@@ -2,6 +2,7 @@
 require_once 'admin/inc_header.php';
 
 $orderid = get("orderid");
+$status = get("status");
 
 $result = execute_query("SELECT * FROM `Order` WHERE `OrderId` =$orderid");
 
@@ -19,8 +20,18 @@ if (mysqli_num_rows($result) > 0) {
         
         <tr>
             <th>Order Status</th>
-            <td><input type="text" name="status" id="status"
-                       value="<?php echo $row["OrderStatus"] ?>" /></td>
+            <td><select name="status">
+                    <option value="Đang chờ" <?php echo $status == 'Đang chờ' ? "selected" : "" ?>>
+                        Đang chờ
+                    </option>
+                    <option value="Đang xử lý" <?php echo $status == 'Đang xử lý' ? "selected" : "" ?>>
+                        Đang xử lý
+                    </option>
+                    <option value="Đã giao hàng" <?php echo $status == 'Đã giao hàng' ? "selected" : "" ?>>
+                        Đã giao hàng
+                    </option>
+                </select>
+            </td>
         </tr>
         
         <tr>
@@ -73,7 +84,8 @@ if (mysqli_num_rows($result) > 0) {
         </tr>
         
         <tr>
-            <th><input type="submit" value="Cập nhật" /></th>
+            <td></td>
+            <td><input type="submit" value="Cập nhật" /></td>
 
         </tr>
     </table>

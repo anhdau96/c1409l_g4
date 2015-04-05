@@ -9,7 +9,7 @@ require_once 'admin/inc_header.php';
     <table>
         <tr>
             <th>TypePay Name</th>
-            <td><input type="text" name="typepayname" id="typepayname" /></td>
+            <td><input type="text" name="typepayname" id="typepayname" required/></td>
         </tr>	
         <tr>
             <td><input type="submit" value="Thêm mới" /></td>

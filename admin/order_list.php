@@ -34,7 +34,6 @@ for ($i=1;$i<=$total_page; $i++) {
         <th>Note</th>
         <th>Chi tiết</th>
         <th>Cập nhập</th>
-        <th>Xóa</th>
     </tr>
 
     <?php
@@ -50,10 +49,9 @@ for ($i=1;$i<=$total_page; $i++) {
             <td><?php echo $row["ReceiverPhone"] ?></td>
             <td><?php echo $row["ReceiverAddress"] ?></td>
             <td><?php echo $row["Note"] ?></td>
-            <td><a href="">Chi tiết</a></td>
-            <td><a href="order_edit?orderid=<?php echo $row["OrderId"] ?>">Cập
+            <td><a href="order_detail?orderid=<?php echo($row["OrderId"])?>">Chi tiết</a></td>
+            <td><a href="order_edit?orderid=<?php echo $row["OrderId"] ?>&status=<?php echo $row["OrderStatus"] ?>">Cập
             nhật</a></td>
-            <td><a href="../order?do=delete&orderid=<?php echo $row["OrderId"] ?>">X</a> </td>
         </tr>	
     <?php } ?>	
 </table>

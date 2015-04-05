@@ -13,7 +13,7 @@ require_once 'inc_header.php';
 			 			<div class="col-md-6 contact_left wow fadeInRight" data-wow-delay="0.4s">
 			 				<h4>Đơn Liên hệ</h4>
 			 				<p>ATDragon Restaurant</p>
-                                                        <form action="feedback.php?do=add_new" method="post">
+                                                        <form action="user/feedback.php?do=add_new" method="post">
 								 <div class="form_details">
                                                                         <input type="text" class="text" name="feedname" value="Tên"  onfocus="this.value = '';" onblur="if (this.value === '') {this.value = 'Name';}">
 									 <input type="text" class="text" name="feedemail" value="Địa chỉ email" onfocus="this.value = '';" onblur="if (this.value === '') {this.value = 'Email Address';}">

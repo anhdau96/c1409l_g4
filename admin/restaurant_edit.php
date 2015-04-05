@@ -24,19 +24,19 @@ if (mysqli_num_rows($result) > 0) {
         <tr>
             <th>Restaurant Address</th>
             <td><input type="text" name="resaddress" id="resaddress"
-                       value="<?php echo $row["ResAddress"] ?>" /></td>
+                       value="<?php echo $row["ResAddress"] ?>" required/></td>
         </tr>
 
         <tr>
             <th>Restaurant Phone</th>
             <td><input type="text" name="resphone" id="resphone"
-                       value="<?php echo $row["ResPhone"] ?>" /></td>
+                       value="<?php echo $row["ResPhone"] ?>" required/></td>
         </tr>        
         
         <tr>
             <th>Restaurant Manager</th>
             <td><input type="text" name="resmanager" id="resmanager"
-                       value="<?php echo $row["ResManager"] ?>" /></td>
+                       value="<?php echo $row["ResManager"] ?>" required/></td>
         </tr>
         
         <tr>

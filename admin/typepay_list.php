@@ -25,9 +25,9 @@ $result = execute_query($query1);
         <tr>
             <td><?php echo $row["TypePayId"] ?></td>
             <td><?php echo $row["TypePayName"] ?></td>
-            <td><a href="typepay_edit?typepayid=<?php echo $row["TypePayId"] ?>">Cập
+            <td><a href="typepay_edit?typeid=<?php echo $row["TypePayId"] ?>">Cập
             nhật</a></td>
-            <td><a href="process/typepay?do=delete&typepayid=<?php echo $row["TypePayId"] ?>">X</a></td> 
+            <td><a href="process/typepay?do=delete&typeid=<?php echo $row["TypePayId"] ?>">X</a></td> 
         </tr>	
     <?php } ?>	
 </table>

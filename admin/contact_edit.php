@@ -24,38 +24,38 @@ if (mysqli_num_rows($result) > 0) {
         <tr>
             <th>Name</th>
             <td><input type="text" name="name" id="name"
-                       value="<?php echo $row["Name"] ?>" /></td>
+                       value="<?php echo $row["Name"] ?>" required/></td>
         </tr>
 
         <tr>
             <th>Job</th>
             <td><input type="Job" name="job" id="Job"
-                       value="<?php echo $row["Job"] ?>" /></td>
+                       value="<?php echo $row["Job"] ?>" required/></td>
         </tr>
 
 
         <tr>
             <th>Description</th>
             <td><input type="text" name="description" id="Description"
-                       value="<?php echo $row["Description"] ?>" /></td>
+                       value="<?php echo $row["Description"] ?>" required/></td>
         </tr>        
         
         <tr>
             <th>Email</th>
             <td><input type="text" name="email" id="email"
-                       value="<?php echo $row["Email"] ?>" /></td>
+                       value="<?php echo $row["Email"] ?>" required/></td>
         </tr>
         
         <tr>
             <th>Phone</th>
             <td><input type="text" name="phone" id="phone"
-                       value="<?php echo $row["Phone"] ?>" /></td>
+                       value="<?php echo $row["Phone"] ?>" required/></td>
         </tr>
         
         <tr>
             <th>Facebook</th>
             <td><input type="text" name="facebook" id="facebook"
-                       value="<?php echo $row["Facebook"] ?>" /></td>
+                       value="<?php echo $row["Facebook"] ?>" required/></td>
         </tr>
         
         <tr>

@@ -19,7 +19,7 @@ function update() {
 }
 
 function delete() {
-    $typepayid= get("typepayid");
-    execute_query("DELETE FROM `TypePay` WHERE TypePayId='$typepayid'");
+    $typeid= get("typeid");
+    execute_query("DELETE FROM `TypePay` WHERE TypePayId='$typeid'");
     redirect("../typepay_list");
 }

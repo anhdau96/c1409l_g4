@@ -37,7 +37,7 @@ $result = execute_query($query1);
             <td><?php echo $row["Facebook"] ?></td>
             <td><a href="contact_edit?contactid=<?php echo $row["ContactId"] ?>">Cập
             nhật</a></td>
-            <td><a href="process/contact?do=delete&contacid=<?php echo $row["ContactId"] ?>">X</a> </td>
+            <td><a href="process/contact?do=delete&contactid=<?php echo $row["ContactId"] ?>">X</a> </td>
         </tr>	
     <?php } ?>	
 </table>

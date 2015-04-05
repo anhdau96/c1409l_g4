@@ -24,38 +24,38 @@ if (mysqli_num_rows($result) > 0) {
         <tr>
             <th>Username</th>
             <td><input type="text" name="username" id="username"
-                       value="<?php echo $row["AUsername"] ?>" /></td>
+                       value="<?php echo $row["AUsername"] ?>" required/></td>
         </tr>
 
         <tr>
             <th>Password</th>
             <td><input type="password" name="password" id="password"
-                       value="<?php echo $row["APassword"] ?>" /></td>
+                       value="<?php echo $row["APassword"] ?>" required/></td>
         </tr>
 
 
         <tr>
             <th>Fullname</th>
             <td><input type="text" name="fullname" id="fullname"
-                       value="<?php echo $row["AFullname"] ?>" /></td>
+                       value="<?php echo $row["AFullname"] ?>" required/></td>
         </tr>
         
         <tr>
             <th>Address</th>
             <td><input type="text" name="address" id="address"
-                       value="<?php echo $row["AAddress"] ?>" /></td>
+                       value="<?php echo $row["AAddress"] ?>" required/></td>
         </tr>
         
         <tr>
             <th>Email</th>
             <td><input type="text" name="email" id="email"
-                       value="<?php echo $row["AEmail"] ?>" /></td>
+                       value="<?php echo $row["AEmail"] ?>" required/></td>
         </tr>
         
         <tr>
             <th>Phone</th>
             <td><input type="text" name="phone" id="phone"
-                       value="<?php echo $row["APhone"] ?>" /></td>
+                       value="<?php echo $row["APhone"] ?>" required/></td>
         </tr>
         
         <tr>

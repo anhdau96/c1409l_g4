@@ -9,33 +9,33 @@ require_once 'admin/inc_header.php';
     <table>
         <tr>
             <th>Username</th>
-            <td><input type="text" name="username" id="username" /></td>
+            <td><input type="text" name="username" id="username" required/></td>
         </tr>
 
         <tr>
             <th>Password</th>
-            <td><input type="password" name="password" id="password" /></td>
+            <td><input type="password" name="password" id="password" required /></td>
         </tr>				
 
 
         <tr>
             <th>Fullname</th>
-            <td><input type="text" name="fullname" id="fullname" /></td>
+            <td><input type="text" name="fullname" id="fullname" required /></td>
         </tr>
         
         <tr>
             <th>Address</th>
-            <td><input type="text" name="address" id="address" /></td>
+            <td><input type="text" name="address" id="address" required /></td>
         </tr>
         
         <tr>
             <th>Email</th>
-            <td><input type="text" name="email" id="email" /></td>
+            <td><input type="text" name="email" id="email" required/></td>
         </tr>
         
         <tr>
             <th>Phone</th>
-            <td><input type="text" name="phone" id="phone" /></td>
+            <td><input type="text" name="phone" id="phone" required/></td>
         </tr>
         
         <tr>
